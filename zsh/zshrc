@@ -13,6 +13,7 @@ plugins=(
   autojump
   zsh-autosuggestions
   zsh-syntax-highlighting
+  my-patches
 )
 
 source $ZSH/oh-my-zsh.sh
