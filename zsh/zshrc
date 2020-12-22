@@ -1,0 +1,48 @@
+export ZSH="/home/victor-gp/.oh-my-zsh"
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+CASE_SENSITIVE="true" # for completion
+
+HIST_STAMPS="%d/%m %H:%M"
+
+# every Oh My Zsh setting:
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template
+
+plugins=(
+  autojump
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+### USER CONFIG
+
+alias gitp='GIT_PAGER="less -FRX" git'
+
+type pbcopy &> /dev/null || alias pbcopy='xsel --clipboard --input'
+type pbpaste &> /dev/null || alias pbpaste='xsel --clipboard --output'
+
+alias vscode="$(which code)"
+alias vsc="$(which code)"
+alias code='cd code'
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# version manager for Java, Scala, sbk, etc.
+export SDKMAN_DIR="/home/victor-gp/.sdkman"
+[[ -s "/home/victor-gp/.sdkman/bin/sdkman-init.sh" ]] && source "/home/victor-gp/.sdkman/bin/sdkman-init.sh"

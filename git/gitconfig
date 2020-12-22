@@ -1,0 +1,25 @@
+[user]
+	name = victor-gp
+	email = victor.gp.dev@gmail.com
+[core]
+	editor = nano -cS
+	excludesFile = ~/.gitignore
+	pager = less -FRX
+[pager]
+	log = less -+F -+X
+	diff = less -+F -+X
+	show = less -+F -+X
+[alias]
+	logo = log --oneline
+	pushu = !git push --set-upstream origin $(git symbolic-ref --short HEAD)
+	pushf = push --force-with-lease
+	comma = commit --amend
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true
+	autoSquash = true
+[diff]
+	algorithm = histogram
+[merge]
+	ff = false
