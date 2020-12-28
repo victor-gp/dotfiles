@@ -4,7 +4,6 @@
 [core]
 	editor = nano -cS
 	excludesFile = ~/.gitignore
-	pager = less -FRX
 [pager]
 	log = less -+F -+X
 	diff = less -+F -+X

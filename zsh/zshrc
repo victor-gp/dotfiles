@@ -24,6 +24,7 @@ source $ZSH/oh-my-zsh.sh
 
 ### USER CONFIG
 
+unset LESS
 alias gitp='GIT_PAGER="less -FRX" git'
 
 type pbcopy &> /dev/null || alias pbcopy='xsel --clipboard --input'
