@@ -41,5 +41,30 @@
     "material-icon-theme.hidesExplorerArrows": true,
     "material-icon-theme.activeIconPack": "react",
     "workbench.tree.indent": 16,
-    "workbench.list.horizontalScrolling": true
+    "workbench.list.horizontalScrolling": true,
+    "todo-tree.general.tags": ["TODO", "NICE", "WTF", "FIXME"],
+    "todo-tree.filtering.ignoreGitSubmodules": true,
+    "todo-tree.highlights.defaultHighlight": {
+        "type": "tag-and-comment",
+        "foreground": "black",
+        "iconColour": "white"
+    },
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "background": "khaki",
+            "icon": "tasklist"
+        },
+        "NICE": {
+            "background": "teal",
+            "icon": "gift"
+        },
+        "WTF": {
+            "background": "chocolate",
+            "icon": "thumbsdown"
+        },
+        "FIXME": {
+            "background": "crimson",
+            "icon": "alert"
+        }
+    },
 }
