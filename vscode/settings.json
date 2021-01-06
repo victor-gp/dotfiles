@@ -67,6 +67,7 @@
             "icon": "alert"
         }
     },
+    "editor.autoIndent": "advanced",
     "workbench.colorCustomizations": {
         "[Dracula]": {
             "editor.lineHighlightBackground": "#323442",
