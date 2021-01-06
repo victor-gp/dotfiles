@@ -13,12 +13,12 @@
     "editor.wordWrap": "on",
     "editor.scrollBeyondLastLine": false,
     "editor.padding.bottom": 32,
-    "workbench.colorTheme": "Night Owl",
+    "workbench.colorTheme": "Dracula",
     "editor.formatOnPaste": true,
     "sundial.sunrise": "10:00",
-    "sundial.sunset": "17:30",
-    "workbench.preferredDarkColorTheme": "Night Owl",
-    "workbench.preferredLightColorTheme": "Solarized Light",
+    "sundial.sunset": "17:00",
+    "workbench.preferredDarkColorTheme": "Dracula",
+    "workbench.preferredLightColorTheme": "Chinolor Light",
     "editor.tabSize": 3,
     "[python]": {
         "editor.tabSize": 4
@@ -65,6 +65,12 @@
         "FIXME": {
             "background": "crimson",
             "icon": "alert"
+        }
+    },
+    "workbench.colorCustomizations": {
+        "[Dracula]": {
+            "editor.lineHighlightBackground": "#323442",
+            "editor.lineHighlightBorder": "#323442",
         }
     },
 }
