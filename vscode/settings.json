@@ -35,7 +35,6 @@
     "editor.cursorBlinking": "smooth",
     "terminal.integrated.cursorStyle": "underline",
     "terminal.integrated.cursorBlinking": true,
-    "todo-tree.tree.showScanModeButton": false,
     "workbench.iconTheme": "material-icon-theme",
     "material-icon-theme.folders.theme": "classic",
     "material-icon-theme.hidesExplorerArrows": true,
@@ -67,6 +66,10 @@
             "icon": "alert"
         }
     },
+    "todo-tree.tree.flat": true,
+    "todo-tree.tree.expanded": true,
+    "todo-tree.tree.hideTreeWhenEmpty": true,
+    "todo-tree.tree.hideIconsWhenGroupedByTag": true,
     "editor.autoIndent": "advanced",
     "workbench.colorCustomizations": {
         "[Dracula]": {
