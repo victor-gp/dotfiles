@@ -74,4 +74,7 @@
             "editor.lineHighlightBorder": "#323442",
         }
     },
+    "python.formatting.autopep8Args": [
+        "--max-line-length 10000"
+    ],
 }
