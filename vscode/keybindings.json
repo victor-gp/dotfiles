@@ -1,0 +1,6 @@
+[
+   {
+      "key": "ctrl+alt+1",
+      "command": "workbench.action.splitEditor"
+   }
+]
