@@ -46,7 +46,7 @@
     "todo-tree.highlights.defaultHighlight": {
         "type": "tag-and-comment",
         "foreground": "black",
-        "iconColour": "white"
+        "iconColour": "orange"
     },
     "todo-tree.highlights.customHighlight": {
         "TODO": {
