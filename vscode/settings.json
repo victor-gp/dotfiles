@@ -80,4 +80,5 @@
     "python.formatting.autopep8Args": [
         "--max-line-length 10000"
     ],
+    "window.openFilesInNewWindow": "default",
 }
