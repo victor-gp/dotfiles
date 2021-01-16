@@ -6,8 +6,8 @@
 	excludesFile = ~/.gitignore
 [pager]
 	log = less -+F -+X
-	diff = less -+F -+X
-	show = less -+F -+X
+	diff = delta | less -+F -+X
+	show = delta | less -+F -+X
 [alias]
 	logo = log --oneline
 	pushu = !git push --set-upstream origin $(git symbolic-ref --short HEAD)
@@ -22,3 +22,10 @@
 	algorithm = histogram
 [merge]
 	ff = false
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	syntax-theme = Dracula
+	line-numbers = true
+	commit-decoration-style = bold yellow ul
+	width = 96
