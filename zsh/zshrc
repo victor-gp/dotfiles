@@ -12,6 +12,7 @@ HIST_STAMPS="%d/%m %H:%M"
 
 plugins=(
   autojump
+  bgnotify
   zsh-autosuggestions
   zsh-syntax-highlighting
   my-patches
