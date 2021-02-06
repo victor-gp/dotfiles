@@ -81,4 +81,6 @@
         "--max-line-length 10000"
     ],
     "window.openFilesInNewWindow": "default",
+    "python.languageServer": "Pylance",
+    "python.analysis.completeFunctionParens": true,
 }
