@@ -2,7 +2,7 @@
 	name = victor-gp
 	email = victor.gp.dev@gmail.com
 [core]
-	editor = nano -cS
+	editor = vim +startinsert
 	excludesFile = ~/.gitignore
 [pager]
 	log = less -+F -+X
