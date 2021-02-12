@@ -19,7 +19,6 @@
     "sundial.sunset": "18:00",
     "workbench.preferredDarkColorTheme": "Night Owl (No Italics)",
     "workbench.preferredLightColorTheme": "Chinolor Light",
-    "editor.tabSize": 3,
     "[python]": {
         "editor.tabSize": 4
     },
