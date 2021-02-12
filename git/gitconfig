@@ -29,3 +29,5 @@
 	line-numbers = true
 	commit-decoration-style = bold yellow ul
 	width = 96
+[sequence]
+	editor = vim

@@ -1,4 +1,4 @@
-colorscheme desert
+autocmd FileType gitcommit colorscheme desert
 filetype plugin indent on
 autocmd FileType gitcommit set spell
 autocmd FileType gitcommit set spelllang=en
@@ -6,3 +6,5 @@ autocmd FileType gitcommit highlight clear SpellBad
 autocmd FileType gitcommit highlight SpellBad ctermfg=red cterm=underline
 autocmd FileType gitcommit highlight clear SpellCap
 autocmd FileType gitcommit highlight SpellCap ctermfg=blue
+
+autocmd FileType gitrebase colorscheme elflord
