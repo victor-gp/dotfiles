@@ -8,3 +8,6 @@
     ~/.zshrc: zshrc
     ~/.oh-my-zsh/custom.symlink: ohmyzsh-custom
     ~/.p10k.zsh: p10k.zsh
+
+- shell:
+    - git submodule update --depth 1
