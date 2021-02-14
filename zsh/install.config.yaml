@@ -1,0 +1,10 @@
+# Dotbot config file
+
+- defaults:
+    link:
+      relink: true
+
+- link:
+    ~/.zshrc: zshrc
+    ~/.oh-my-zsh/custom.symlink: ohmyzsh-custom
+    ~/.p10k.zsh: p10k.zsh

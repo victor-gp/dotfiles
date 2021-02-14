@@ -1,0 +1,10 @@
+# Dotbot config file
+
+- defaults:
+    link:
+      relink: true
+
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+    ~/.vimrc: vimrc
