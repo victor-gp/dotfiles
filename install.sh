@@ -3,8 +3,10 @@
 # <configuration>
 
 DOTBOT_VERSION="v1.18.0"
+
 TOPICS=(
     git
+    gnome-terminal
     vscode
     zsh
 )
@@ -29,6 +31,8 @@ echo "Checkout successful" >&2
 set +e
 
 for topic in "${TOPICS[@]}"; do
+    printf -- '-%.0s' {1..32} ; echo
     echo "Dotbot-installing topic ‘$topic’:"
+
     "${dotbot_dir}/${dotbot_bin}" -c "$topic"/install.config.yaml
 done

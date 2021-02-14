@@ -1,0 +1,13 @@
+# Dotbot config file
+
+- defaults:
+    link:
+      relink: true
+
+- shell:
+  - dconf dump /org/gnome/terminal/ > preferences.dconf_"$(date +%FT%R%z)" # backup
+  - dconf load /org/gnome/terminal/ < preferences.dconf
+
+- link:
+    ~/.config/gtk-3.0/gtk.css: gtk.css
+    ~/.local/share/applications/gnome-terminal.desktop: gnome-terminal.desktop
