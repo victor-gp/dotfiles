@@ -13,16 +13,22 @@ TOPICS=(
 
 set -eu
 
-DOTBOT_DIR="dotbot"
-DOTBOT_BIN="bin/dotbot"
+dotbot_dir="dotbot"
+dotbot_bin="bin/dotbot"
 
 echo "Checking Dotbot out..." >&2
-git clone --quiet https://github.com/anishathalye/dotbot.git "$DOTBOT_DIR"
-git -C "$DOTBOT_DIR" checkout --quiet "tags/${DOTBOT_VERSION}"
-git -C "$DOTBOT_DIR" submodule --quiet update --init --recursive
+
+[ -d "$dotbot_dir" ] ||
+    git clone --quiet https://github.com/anishathalye/dotbot.git "$dotbot_dir"
+
+git -C "$dotbot_dir" checkout --quiet tags/"${DOTBOT_VERSION}"
+git -C "$dotbot_dir" submodule --quiet update --init --recursive
+
 echo "Checkout successful" >&2
 
+set +e
+
 for topic in "${TOPICS[@]}"; do
-    echo "Dotbot-installing topic ‘$topic’..."
-    "${DOTBOT_DIR}/${DOTBOT_BIN}" -c "$topic"/install.config.yaml
+    echo "Dotbot-installing topic ‘$topic’:"
+    "${dotbot_dir}/${dotbot_bin}" -c "$topic"/install.config.yaml
 done
