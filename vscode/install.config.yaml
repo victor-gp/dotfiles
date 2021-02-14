@@ -1,0 +1,9 @@
+# Dotbot config file
+
+- defaults:
+    link:
+      relink: true
+
+- link:
+    ~/.config/Code/User/keybindings.json: keybindings.json
+    ~/.config/Code/User/settings.json: settings.json
