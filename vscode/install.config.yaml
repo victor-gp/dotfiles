@@ -3,6 +3,12 @@
 - defaults:
     link:
       relink: true
+    shell:
+      stdout: true
+      stderr: true
+
+- shell:
+  - ./install_extensions.sh
 
 - link:
     ~/.config/Code/User/keybindings.json: keybindings.json
