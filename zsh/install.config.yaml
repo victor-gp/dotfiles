@@ -3,6 +3,9 @@
 - defaults:
     link:
       relink: true
+    shell:
+      stdout: true
+      stderr: true
 
 - link:
     ~/.zshrc: zshrc

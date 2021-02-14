@@ -3,6 +3,8 @@
 - defaults:
     link:
       relink: true
+    shell:
+      stderr: true
 
 - shell:
   - dconf dump /org/gnome/terminal/ > preferences.dconf_"$(date +%FT%R%z)" # backup
