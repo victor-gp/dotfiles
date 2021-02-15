@@ -1,10 +1,17 @@
 #!/bin/bash
 
-current_extensions=/tmp/current-vscode-extensions.txt
-extensions_to_install=/tmp/current-vscode-extensions-to-install.txt
+if ! command -v code &> /dev/null
+then
+    echo "vscode not installed?" >&2
+    exit 127
+fi
 
+cd "$( dirname "${BASH_SOURCE[0]}" )" || exit 1
+
+current_extensions=/tmp/vscode-current-extensions.txt
 \code --list-extensions > $current_extensions
 
+extensions_to_install=/tmp/vscode-extensions-to-install.txt
 diff --old-line-format="" --unchanged-line-format="" \
     $current_extensions extensions.txt \
     > $extensions_to_install
@@ -17,5 +24,5 @@ if [ ${#extensions_list[@]} -eq 0 ]; then
 fi
 
 for extension in "${extensions_list[@]}"; do
-    code --install-extension "$extension"
+    \code --install-extension "$extension"
 done
