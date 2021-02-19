@@ -5,9 +5,9 @@
 	editor = vim +startinsert
 	excludesFile = ~/.gitignore
 [pager]
-	log = less -+F -+X
-	diff = delta | less -+F -+X
-	show = delta | less -+F -+X
+	log = LESS=R less
+	diff = delta | LESS=R less
+	show = delta | LESS=R less
 [alias]
 	logo = log --oneline
 	pushu = !git push --set-upstream origin $(git symbolic-ref --short HEAD)
