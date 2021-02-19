@@ -1,4 +1,5 @@
 filetype plugin indent on
+set whichwrap+=<,>,[,]
 
 autocmd FileType gitcommit startinsert
 autocmd FileType gitcommit colorscheme desert
