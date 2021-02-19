@@ -2,7 +2,7 @@
 	name = Victor Gonzalez Prieto
 	email = victor.gp.dev@gmail.com
 [core]
-	editor = vim +startinsert
+	editor = vim
 	excludesFile = ~/.gitignore
 [pager]
 	log = LESS=R less
@@ -29,5 +29,3 @@
 	line-numbers = true
 	commit-decoration-style = bold yellow ul
 	width = 96
-[sequence]
-	editor = vim
