@@ -2,6 +2,7 @@ filetype plugin indent on
 set whichwrap+=<,>,[,]
 
 autocmd FileType gitcommit startinsert
+autocmd FileType gitcommit set showcmd
 autocmd FileType gitcommit colorscheme desert
 autocmd FileType gitcommit set spell
 autocmd FileType gitcommit set spelllang=en
