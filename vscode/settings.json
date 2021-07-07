@@ -67,11 +67,13 @@
             "icon": "alert"
         }
     },
-    "todo-tree.tree.flat": true,
-    "todo-tree.tree.expanded": true,
-    "todo-tree.tree.hideTreeWhenEmpty": true,
-    "todo-tree.tree.hideIconsWhenGroupedByTag": true,
-    "todo-tree.tree.showScanModeButton": false,
+    "todo-tree.tree": {
+        "flat": true,
+        "expanded": true,
+        "hideTreeWhenEmpty": true,
+        "hideIconsWhenGroupedByTag": true,
+        "showScanModeButton": false,
+    },
     "editor.autoIndent": "advanced",
     "workbench.colorCustomizations": {
         "[Dracula]": {
@@ -85,18 +87,10 @@
     "window.openFilesInNewWindow": "default",
     "python.languageServer": "Pylance",
     "python.analysis.completeFunctionParens": true,
-    "[markdown]": {
-        "editor.tabSize": 2,
-    },
-    "[scala]": {
-        "editor.tabSize": 2
-    },
+    "[markdown].editor.tabSize": 2,
+    "[scala].editor.tabSize": 2,
     "workbench.editor.untitled.hint": "hidden",
     "redhat.telemetry.enabled": false,
-    "[rust]": {
-        "editor.tabSize": 4
-    },
-    "[ruby]": {
-        "editor.tabSize": 2
-    },
+    "[rust].editor.tabSize": 4,
+    "[ruby].editor.tabSize": 2,
 }
