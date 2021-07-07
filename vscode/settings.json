@@ -39,20 +39,23 @@
     "material-icon-theme.activeIconPack": "react",
     "workbench.tree.indent": 16,
     "workbench.list.horizontalScrolling": true,
-    "todo-tree.general.tags": ["TODO", "NICE", "WTF", "FIXME"],
+    "todo-tree.general.tags": ["FIXME", "TODO", "WTF", "NICE"],
+    "todo-tree.regex.regexCaseSensitive": false,
     "todo-tree.filtering.ignoreGitSubmodules": true,
     "todo-tree.highlights.defaultHighlight": {
         "type": "tag-and-comment",
         "foreground": "black",
-        "iconColour": "orange"
+        "iconColour": "mediumpurple",
     },
     "todo-tree.highlights.customHighlight": {
         "TODO": {
             "background": "khaki",
+            "rulerColour": "darkkhaki",
             "icon": "tasklist"
         },
         "NICE": {
             "background": "teal",
+            "foreground": "whitesmoke",
             "icon": "gift"
         },
         "WTF": {
