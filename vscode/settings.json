@@ -1,6 +1,5 @@
 {
     "workbench.startupEditor": "newUntitledFile",
-    "window.zoomLevel": 0,
     "editor.acceptSuggestionOnEnter": "off",
     "workbench.editor.highlightModifiedTabs": true,
     "diffEditor.ignoreTrimWhitespace": false,
@@ -16,7 +15,7 @@
     "workbench.colorTheme": "Night Owl (No Italics)",
     "editor.formatOnPaste": true,
     "sundial.sunrise": "8:00",
-    "sundial.sunset": "18:00",
+    "sundial.sunset": "21:00",
     "workbench.preferredDarkColorTheme": "Night Owl (No Italics)",
     "workbench.preferredLightColorTheme": "Chinolor Light",
     "[python]": {
@@ -87,6 +86,14 @@
         "editor.tabSize": 2,
     },
     "[scala]": {
+        "editor.tabSize": 2
+    },
+    "workbench.editor.untitled.hint": "hidden",
+    "redhat.telemetry.enabled": false,
+    "[rust]": {
+        "editor.tabSize": 4
+    },
+    "[ruby]": {
         "editor.tabSize": 2
     },
 }
