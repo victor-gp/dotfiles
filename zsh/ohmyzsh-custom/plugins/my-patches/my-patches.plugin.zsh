@@ -2,7 +2,7 @@
 
 ### for zsh-syntax-highlighting
 
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
 ZSH_HIGHLIGHT_STYLES[default]=none
 ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red
@@ -22,3 +22,9 @@ ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=magenta
 ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=magenta
 ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=magenta
 ZSH_HIGHLIGHT_STYLES[assign]=none
+
+typeset -A ZSH_HIGHLIGHT_PATTERNS
+# do not disturb on the first token
+ZSH_HIGHLIGHT_PATTERNS+=('(#s)[ ]#[a-zA-Z0-9_]##(#e)' 'bg=black')
+# caution when "$ rm -rf"
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf' 'fg=white,bold,bg=red')
