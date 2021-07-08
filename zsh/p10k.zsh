@@ -11,6 +11,24 @@
 #
 #   for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done
 
+# custom color scheme
+black='0'
+red='1'
+green='2'
+yellow='3'
+blue='4'
+magenta='5'
+cyan='6'
+white='7'
+bright_black='8'
+bright_red='9'
+bright_green='10'
+bright_yellow='11'
+bright_blue='12'
+bright_magenta='13'
+bright_cyan='14'
+bright_white='15'
+
 # Temporarily change options.
 'builtin' 'local' '-a' 'p10k_config_opts'
 [[ ! -o 'aliases'         ]] || p10k_config_opts+=('aliases')
@@ -181,7 +199,7 @@
   # Green prompt symbol if the last command succeeded.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=%f
   # Red prompt symbol if the last command failed.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=196
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND="$red"
   # Default prompt symbol.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION=''
   # Prompt symbol in command vi mode.
@@ -198,17 +216,17 @@
 
   ##################################[ dir: current directory ]##################################
   # Default current directory color.
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=111
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND="$bright_blue"
   # If directory is too long, shorten some of its segments to the shortest possible unique
   # prefix. The shortened directory can be tab-completed to the original.
   typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
   # Replace removed segment suffixes with this symbol.
   typeset -g POWERLEVEL9K_SHORTEN_DELIMITER=
   # Color of the shortened directory segments.
-  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=111
+  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND="$blue"
   # Color of the anchor directory segments. Anchor segments are never shortened. The first
   # segment is always an anchor.
-  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=110
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND="$bright_blue"
   # Display anchor directory segments in bold.
   typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=true
   # Don't shorten directories that contain any of these files. They are anchors.
@@ -358,12 +376,12 @@
 
     if (( $1 )); then
       # Styling for up-to-date Git status.
-      local       meta='%f'     # default foreground
-      local      clean='%82F'   # green foreground
-      local   modified='%178F'  # yellow foreground
-      local  untracked='%39F'   # blue foreground
-      local conflicted='%196F'  # red foreground
-      local  delimiter='%96F'   # purple foreground
+      local       meta='%f' # default foreground
+      local      clean="%${green}F"
+      local   modified="%${yellow}F"
+      local  untracked="%${bright_blue}F"
+      local conflicted="%${bright_red}F"
+      local  delimiter="%${magenta}F"
     else
       # Styling for incomplete and stale Git status.
       local       meta='%244F'  # grey foreground
