@@ -26,6 +26,8 @@ source $ZSH/oh-my-zsh.sh
 
 ### USER CONFIG
 
+bindkey -v
+
 unset LESS
 alias gitp='GIT_PAGER="less -FRX" git'
 
