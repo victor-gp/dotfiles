@@ -41,6 +41,11 @@ alias code='cd code'
 
 alias ls='ls --color=tty --group-directories-first'
 
+# prompt before removing files
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -I'
+
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
