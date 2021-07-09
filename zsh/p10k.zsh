@@ -20,14 +20,15 @@ blue='4'
 magenta='5'
 cyan='6'
 white='7'
-bright_black='8'
-bright_red='9'
-bright_green='10'
-bright_yellow='11'
-bright_blue='12'
-bright_magenta='13'
-bright_cyan='14'
-bright_white='15'
+light_black='8'
+light_red='9'
+light_green='10'
+light_yellow='11'
+light_blue='12'
+light_magenta='13'
+light_cyan='14'
+light_white='15'
+dark_purple='96'
 
 # Temporarily change options.
 'builtin' 'local' '-a' 'p10k_config_opts'
@@ -196,10 +197,10 @@ bright_white='15'
   # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
 
   ################################[ prompt_char: prompt symbol ]################################
-  # Green prompt symbol if the last command succeeded.
+  # Default color prompt symbol if the last command succeeded.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=%f
   # Red prompt symbol if the last command failed.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND="$red"
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=$red
   # Default prompt symbol.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION=''
   # Prompt symbol in command vi mode.
@@ -216,17 +217,17 @@ bright_white='15'
 
   ##################################[ dir: current directory ]##################################
   # Default current directory color.
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND="$bright_blue"
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$light_blue
   # If directory is too long, shorten some of its segments to the shortest possible unique
   # prefix. The shortened directory can be tab-completed to the original.
   typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
   # Replace removed segment suffixes with this symbol.
   typeset -g POWERLEVEL9K_SHORTEN_DELIMITER=
   # Color of the shortened directory segments.
-  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND="$blue"
+  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=$blue
   # Color of the anchor directory segments. Anchor segments are never shortened. The first
   # segment is always an anchor.
-  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND="$bright_blue"
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=$light_blue
   # Display anchor directory segments in bold.
   typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=true
   # Don't shorten directories that contain any of these files. They are anchors.
@@ -377,11 +378,11 @@ bright_white='15'
     if (( $1 )); then
       # Styling for up-to-date Git status.
       local       meta='%f' # default foreground
-      local      clean="%${green}F"
-      local   modified="%${yellow}F"
-      local  untracked="%${bright_blue}F"
-      local conflicted="%${bright_red}F"
-      local  delimiter="%${magenta}F"
+      local      clean="%${light_green}F"
+      local   modified="%${light_yellow}F"
+      local  untracked="%${light_cyan}F"
+      local conflicted="%${light_red}F"
+      local  delimiter="%${dark_purple}F"
     else
       # Styling for incomplete and stale Git status.
       local       meta='%244F'  # grey foreground
@@ -437,7 +438,7 @@ bright_white='15'
     # ⇢42 if ahead of the push remote; no leading space if also behind: ⇠42⇢42.
     (( VCS_STATUS_PUSH_COMMITS_AHEAD  )) && res+="${clean}⇢${VCS_STATUS_PUSH_COMMITS_AHEAD}"
     # *42 if have stashes.
-    (( VCS_STATUS_STASHES        )) && res+=" ${modified}*${VCS_STATUS_STASHES}"
+    (( VCS_STATUS_STASHES        )) && res+=" ${untracked}*${VCS_STATUS_STASHES}"
     # 'merge' if the repo is in an unusual state.
     [[ -n $VCS_STATUS_ACTION     ]] && res+=" ${conflicted}${VCS_STATUS_ACTION}"
     # ~42 if have merge conflicts.
