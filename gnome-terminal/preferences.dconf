@@ -5,7 +5,7 @@ theme-variant='dark'
 
 [legacy/profiles:]
 default='b8f9e94a-17d3-4842-a207-ed966fdcd00e'
-list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', 'b8f9e94a-17d3-4842-a207-ed966fdcd00e']
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', 'b8f9e94a-17d3-4842-a207-ed966fdcd00e', 'cebeec44-6350-4995-9ad8-51c829221eec']
 
 [legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 audible-bell=false
@@ -17,10 +17,10 @@ default-size-columns=111
 default-size-rows=22
 font='UbuntuMono Nerd Font Mono 13'
 foreground-color='rgb(204,204,204)'
-palette=['rgb(46,52,54)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
+palette=['rgb(0,0,0)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
 use-system-font=false
 use-theme-colors=false
-visible-name='tango-mod'
+visible-name='tango-darker'
 
 [legacy/profiles:/:b8f9e94a-17d3-4842-a207-ed966fdcd00e]
 audible-bell=false
@@ -36,3 +36,17 @@ palette=['rgb(28,27,25)', 'rgb(239,47,39)', 'rgb(81,159,80)', 'rgb(251,184,41)',
 use-system-font=false
 use-theme-colors=false
 visible-name='srcery'
+
+[legacy/profiles:/:cebeec44-6350-4995-9ad8-51c829221eec]
+audible-bell=false
+background-color='rgb(12,11,9)'
+cursor-blink-mode='on'
+cursor-shape='underline'
+default-size-columns=111
+default-size-rows=22
+font='UbuntuMono Nerd Font Mono 13'
+foreground-color='rgb(252,232,195)'
+palette=['rgb(12,11,9)', 'rgb(239,47,39)', 'rgb(81,159,80)', 'rgb(251,184,41)', 'rgb(44,120,191)', 'rgb(224,44,109)', 'rgb(10,174,179)', 'rgb(186,166,127)', 'rgb(145,129,117)', 'rgb(247,83,65)', 'rgb(152,188,55)', 'rgb(254,208,110)', 'rgb(104,168,228)', 'rgb(255,92,143)', 'rgb(43,228,208)', 'rgb(252,232,195)']
+use-system-font=false
+use-theme-colors=false
+visible-name='srcery-darker'
