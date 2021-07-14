@@ -5,7 +5,7 @@ theme-variant='dark'
 
 [legacy/profiles:]
 default='b8f9e94a-17d3-4842-a207-ed966fdcd00e'
-list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', 'b8f9e94a-17d3-4842-a207-ed966fdcd00e', 'cebeec44-6350-4995-9ad8-51c829221eec']
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', 'b8f9e94a-17d3-4842-a207-ed966fdcd00e', 'cebeec44-6350-4995-9ad8-51c829221eec', 'd278f1e1-5a28-4fe4-8e7e-549d46bfa831']
 
 [legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 audible-bell=false
@@ -50,3 +50,17 @@ palette=['rgb(12,11,9)', 'rgb(239,47,39)', 'rgb(81,159,80)', 'rgb(251,184,41)', 
 use-system-font=false
 use-theme-colors=false
 visible-name='srcery-darker'
+
+[legacy/profiles:/:d278f1e1-5a28-4fe4-8e7e-549d46bfa831]
+audible-bell=false
+background-color='rgb(40,42,54)'
+cursor-blink-mode='on'
+cursor-shape='underline'
+default-size-columns=111
+default-size-rows=22
+font='UbuntuMono Nerd Font Mono 13'
+foreground-color='rgb(239,240,235)'
+palette=['rgb(40,42,54)', 'rgb(255,92,87)', 'rgb(90,247,142)', 'rgb(243,249,157)', 'rgb(87,199,255)', 'rgb(255,106,193)', 'rgb(154,237,254)', 'rgb(241,241,240)', 'rgb(104,104,104)', 'rgb(255,92,87)', 'rgb(90,247,142)', 'rgb(243,249,157)', 'rgb(87,199,255)', 'rgb(255,106,193)', 'rgb(154,237,254)', 'rgb(239,240,235)']
+use-system-font=false
+use-theme-colors=false
+visible-name='snazzy'
