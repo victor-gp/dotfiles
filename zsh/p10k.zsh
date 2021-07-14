@@ -28,7 +28,15 @@ light_blue='12'
 light_magenta='13'
 light_cyan='14'
 light_white='15'
-dark_purple='96'
+snazzy_black='236'
+snazzy_red='203'
+snazzy_green='84'
+snazzy_yellow='228' # alt: 229
+snazzy_blue='81'
+snazzy_magenta='205' # alt: 206
+snazzy_cyan='123' # alt: 159
+snazzy_white='255'
+dark_gray='239'
 
 # Temporarily change options.
 'builtin' 'local' '-a' 'p10k_config_opts'
@@ -197,10 +205,10 @@ dark_purple='96'
   # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
 
   ################################[ prompt_char: prompt symbol ]################################
-  # Default color prompt symbol if the last command succeeded.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=%f
+  # White prompt symbol if the last command succeeded.
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=$snazzy_white
   # Red prompt symbol if the last command failed.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=$red
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=$snazzy_red
   # Default prompt symbol.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION=''
   # Prompt symbol in command vi mode.
@@ -217,7 +225,7 @@ dark_purple='96'
 
   ##################################[ dir: current directory ]##################################
   # Default current directory color.
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$light_blue
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$snazzy_blue
   # If directory is too long, shorten some of its segments to the shortest possible unique
   # prefix. The shortened directory can be tab-completed to the original.
   typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
@@ -227,7 +235,7 @@ dark_purple='96'
   typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=$blue
   # Color of the anchor directory segments. Anchor segments are never shortened. The first
   # segment is always an anchor.
-  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=$light_blue
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=$snazzy_blue
   # Display anchor directory segments in bold.
   typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=true
   # Don't shorten directories that contain any of these files. They are anchors.
@@ -377,20 +385,22 @@ dark_purple='96'
 
     if (( $1 )); then
       # Styling for up-to-date Git status.
-      local       meta='%f' # default foreground
-      local      clean="%${light_green}F"
-      local   modified="%${light_yellow}F"
-      local  untracked="%${light_cyan}F"
-      local conflicted="%${light_red}F"
-      local  delimiter="%${dark_purple}F"
+      local       meta="%${snazzy_white}F" # white foreground
+      local      clean="%${snazzy_green}F"
+      local    stashed="%${snazzy_cyan}F"
+      local   modified="%${snazzy_yellow}F"
+      local  untracked="%${snazzy_magenta}F"
+      local conflicted="%${snazzy_red}F"
+      local  delimiter="%${dark_gray}F"
     else
       # Styling for incomplete and stale Git status.
       local       meta='%244F'  # grey foreground
       local      clean='%244F'  # grey foreground
+      local    stashed='%244F'  # grey foreground
       local   modified='%244F'  # grey foreground
       local  untracked='%244F'  # grey foreground
       local conflicted='%244F'  # grey foreground
-      local  delimiter='%244F'  # grey foreground
+      local  delimiter="%${dark_gray}F"
     fi
 
     local res
@@ -438,7 +448,7 @@ dark_purple='96'
     # ⇢42 if ahead of the push remote; no leading space if also behind: ⇠42⇢42.
     (( VCS_STATUS_PUSH_COMMITS_AHEAD  )) && res+="${clean}⇢${VCS_STATUS_PUSH_COMMITS_AHEAD}"
     # *42 if have stashes.
-    (( VCS_STATUS_STASHES        )) && res+=" ${untracked}*${VCS_STATUS_STASHES}"
+    (( VCS_STATUS_STASHES        )) && res+=" ${stashed}*${VCS_STATUS_STASHES}"
     # 'merge' if the repo is in an unusual state.
     [[ -n $VCS_STATUS_ACTION     ]] && res+=" ${conflicted}${VCS_STATUS_ACTION}"
     # ~42 if have merge conflicts.
