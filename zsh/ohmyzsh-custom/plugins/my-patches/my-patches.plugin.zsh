@@ -36,3 +36,10 @@ typeset -A ZSH_HIGHLIGHT_PATTERNS
 ZSH_HIGHLIGHT_PATTERNS+=('(#s)[ ]#[a-zA-Z0-9_]##(#e)' 'bg=black')
 # caution when "$ rm -rf"
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf' 'fg=white,bold,bg=red')
+
+### for zsh-autosuggestions
+
+# fix behavior when ctrl+v plus right arrow
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=bracketed-paste
+# disable autosuggestion for large buffers
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=25
