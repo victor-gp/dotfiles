@@ -76,9 +76,8 @@
     },
     "editor.autoIndent": "advanced",
     "workbench.colorCustomizations": {
-        "[Dracula]": {
-            "editor.lineHighlightBackground": "#323442",
-            "editor.lineHighlightBorder": "#323442",
+        "[Chinolor Light]": {
+            "editorIndentGuide.activeBackground": "#617172"
         }
     },
     "python.formatting.autopep8Args": [
