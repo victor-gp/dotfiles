@@ -36,6 +36,12 @@ alias gitp='GIT_PAGER="less -FRX" git'
 type pbcopy &> /dev/null || alias pbcopy='xsel --clipboard --input'
 type pbpaste &> /dev/null || alias pbpaste='xsel --clipboard --output'
 
+# contextual clipboard
+pb() {
+    # if stdin (fd 0) not a terminal (so a pipe); then copy; else paste
+    [[ ! -t 0 ]] && pbcopy || pbpaste
+}
+
 alias vscode="$(which code)"
 alias code='cd code'
 
