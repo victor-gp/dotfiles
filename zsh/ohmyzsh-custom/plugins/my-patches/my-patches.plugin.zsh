@@ -4,7 +4,6 @@
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
-ZSH_HIGHLIGHT_STYLES[default]=none
 ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red
 ZSH_HIGHLIGHT_STYLES[commandseparator]=fg=yellow
 ZSH_HIGHLIGHT_STYLES[precommand]=fg=yellow
@@ -36,6 +35,9 @@ typeset -A ZSH_HIGHLIGHT_PATTERNS
 ZSH_HIGHLIGHT_PATTERNS+=('(#s)[ ]#[a-zA-Z0-9_]##(#e)' 'bg=black')
 # caution when "$ rm -rf"
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf' 'fg=white,bold,bg=red')
+# orange sudo
+ZSH_HIGHLIGHT_PATTERNS+=('sudo ' 'fg=208')
+
 
 ### for zsh-autosuggestions
 
