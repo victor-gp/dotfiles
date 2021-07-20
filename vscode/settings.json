@@ -75,11 +75,6 @@
         "showScanModeButton": false,
     },
     "editor.autoIndent": "advanced",
-    "workbench.colorCustomizations": {
-        "[Chinolor Light]": {
-            "editorIndentGuide.activeBackground": "#617172"
-        }
-    },
     "python.formatting.autopep8Args": [
         "--max-line-length 10000"
     ],
