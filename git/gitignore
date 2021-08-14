@@ -2,3 +2,4 @@
 vgp-notes.*
 vgp-utils/
 .vscode/
+*.swp

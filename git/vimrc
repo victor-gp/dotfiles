@@ -1,18 +1,15 @@
 filetype plugin indent on
 set whichwrap+=<,>,[,]
+colorscheme peachpuff
 
 autocmd FileType gitcommit startinsert
 autocmd FileType gitcommit set showcmd
-autocmd FileType gitcommit colorscheme desert
+autocmd FileType gitcommit colorscheme pablo
 autocmd FileType gitcommit set spell
 autocmd FileType gitcommit set spelllang=en
 autocmd FileType gitcommit highlight clear SpellBad
-autocmd FileType gitcommit highlight SpellBad ctermfg=red cterm=underline
+autocmd FileType gitcommit highlight SpellBad ctermfg=darkred cterm=underline
 autocmd FileType gitcommit highlight clear SpellCap
-autocmd FileType gitcommit highlight SpellCap ctermfg=blue
+autocmd FileType gitcommit highlight SpellCap ctermfg=darkblue
 
 autocmd FileType gitrebase colorscheme elflord
-
-" filetype matched when editing patch hunks
-autocmd FileType diff startreplace
-autocmd FileType diff colorscheme peachpuff

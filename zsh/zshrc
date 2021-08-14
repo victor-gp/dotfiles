@@ -28,7 +28,12 @@ source $ZSH/oh-my-zsh.sh
 
 ### my config
 
-bindkey -v
+bindkey -v # viins (vi INSERT) keymap
+export KEYTIMEOUT=10 # reduce delay on mode changes
+
+bindkey -v '^R' history-incremental-search-backward # ctrl+R to search history
+bindkey -v '^S' history-incremental-search-forward # ctrl+S to reverse search
+bindkey -v '^U' kill-whole-line # ctrl+U to discard line
 
 unset LESS
 alias gitp='GIT_PAGER="less -FRX" git'
