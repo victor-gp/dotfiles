@@ -18,9 +18,6 @@
     "sundial.sunset": "21:00",
     "workbench.preferredDarkColorTheme": "Night Owl (No Italics)",
     "workbench.preferredLightColorTheme": "Chinolor Light",
-    "[python]": {
-        "editor.tabSize": 4
-    },
     "explorer.autoReveal": false,
     "telemetry.enableTelemetry": false,
     "python.showStartPage": false,
@@ -81,12 +78,18 @@
     "window.openFilesInNewWindow": "default",
     "python.languageServer": "Pylance",
     "python.analysis.completeFunctionParens": true,
-    "[markdown].editor.tabSize": 2,
-    "[scala].editor.tabSize": 2,
+    "editor.tabSize": 4,
+    "[markdown]": {
+        "editor.tabSize": 2,
+    },
+    "[ruby]": {
+        "editor.tabSize": 2,
+    },
+    "[scala]": {
+        "editor.tabSize": 2,
+    },
     "workbench.editor.untitled.hint": "hidden",
     "redhat.telemetry.enabled": false,
-    "[rust].editor.tabSize": 4,
-    "[ruby].editor.tabSize": 2,
     "ruby.format": "rubocop",
     "ruby.intellisense": "rubyLocate",
     "ruby.lint": {
