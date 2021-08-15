@@ -1,9 +1,20 @@
-filetype plugin indent on
+" source $VIMRUNTIME/defaults.vim
+
+set showcmd
+set mouse=a
 set whichwrap+=<,>,[,]
+set scrolloff=3
+
+" matching/search options
+set ignorecase
+set smartcase
+set incsearch
+
+syntax on
+filetype plugin indent on
 colorscheme peachpuff
 
 autocmd FileType gitcommit startinsert
-autocmd FileType gitcommit set showcmd
 autocmd FileType gitcommit colorscheme pablo
 autocmd FileType gitcommit set spell
 autocmd FileType gitcommit set spelllang=en
