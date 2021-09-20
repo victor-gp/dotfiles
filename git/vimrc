@@ -10,6 +10,10 @@ set ignorecase
 set smartcase
 set incsearch
 
+" easy exit from insert mode
+inoremap jk <Esc>
+inoremap kj <Esc>
+
 syntax on
 filetype plugin indent on
 colorscheme peachpuff
