@@ -37,6 +37,7 @@ bindkey -v '^U' kill-whole-line # ctrl+U to discard line
 bindkey -v 'jk' vi-cmd-mode # jk/kj to escape to Normal mode
 bindkey -v 'kj' vi-cmd-mode
 
+# revert unwanted default set by OMZ
 unset LESS
 alias gitp='GIT_PAGER="less -FRX" git'
 
@@ -69,17 +70,5 @@ alias rm='rm -I'
 # don't clear scrollback/history
 alias clear='clear -x'
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-# version manager for Java, Scala, sbt, etc.
-export SDKMAN_DIR="/home/victor-gp/.sdkman"
-[[ -s "/home/victor-gp/.sdkman/bin/sdkman-init.sh" ]] && source "/home/victor-gp/.sdkman/bin/sdkman-init.sh"
+# interactive-only features of pyenv
+[[ -d "$HOME/.pyenv" ]] && eval "$(pyenv init -)"

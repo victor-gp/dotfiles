@@ -1,0 +1,27 @@
+# this runs before .zshrc (and ohmyzsh), on any shell (login and non-tty too)
+
+# Rust package manager
+[[ -d "$HOME/.cargo" ]] && . "$HOME/.cargo/env"
+
+# Ruby version manager
+if [[ -d "$HOME/.rbenv" ]]; then
+    PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
+fi
+
+# Python version manager
+if [[ -d "$HOME/.pyenv" ]]; then
+    PATH="$HOME/.pyenv/bin:$PATH"
+    eval "$(pyenv init --path)"
+fi
+
+# Node version manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# Scala/sbt/Java version manager
+export SDKMAN_DIR="/home/victor-gp/.sdkman"
+[[ -s "/home/victor-gp/.sdkman/bin/sdkman-init.sh" ]] && source "/home/victor-gp/.sdkman/bin/sdkman-init.sh"
+
+export PATH
