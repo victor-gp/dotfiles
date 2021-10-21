@@ -70,5 +70,7 @@ alias rm='rm -I'
 # don't clear scrollback/history
 alias clear='clear -x'
 
+source ~/.functions
+
 # interactive-only features of pyenv
 [[ -d "$HOME/.pyenv" ]] && eval "$(pyenv init -)"

@@ -1,0 +1,40 @@
+#!/bin/bash
+
+export DEVLOGS_DIR=~/Documents/dev-logs
+
+# usage example: lnlog personal/dotfiles.md
+lnlog() {
+    log_relpath="$1"
+    log_path="$DEVLOGS_DIR/$log_relpath"
+    log_dirname=$(dirname "$log_path")
+    log_extension=$(echo "$log_relpath" | sed 's/.*\.//')
+    notes_basename="vgp-notes.$log_extension"
+
+    if [[ ! -d "$log_dirname/" ]]; then
+        echo "lnlog error: no '$log_dirname' directory"
+        return 1
+    elif [[ -h "$notes_basename" ]]; then
+        echo "lnlog error: '$notes_basename' is already a link"
+        return 1
+    elif [[ -f "$notes_basename" ]]; then
+        if [[ ! -a "$log_path" ]]; then
+            # notes exist, but they're not kept in dev-logs yet
+            mv -n "$notes_basename" "$log_path"
+            ln -s "$log_path" "$notes_basename"
+            echo "lnlog: moved '$notes_basename' to 'dev-logs/$log_relpath', then linked that"
+        else
+            # both notes and dev-log exist
+            echo "lnlog error: cannot clobber existing 'dev-logs/$log_relpath' with '$notes_basename'"
+            return 1
+        fi
+    elif [[ -f "$log_path" ]]; then
+        # dev-log already exists, but it's not linked here yet
+        ln -s "$log_path" "$notes_basename"
+        echo "lnlog: linked existing 'dev-logs/$log_relpath' on '$notes_basename'"
+    else
+        # brand new dev-log
+        touch "$log_path"
+        ln -s "$log_path" "$notes_basename"
+        echo "lnlog: created 'dev-logs/$log_relpath', linked it on '$notes_basename'"
+    fi
+}
