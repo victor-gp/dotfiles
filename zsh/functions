@@ -1,16 +1,23 @@
 #!/bin/bash
 
-export DEVLOGS_DIR=~/Documents/dev-logs
-
-# usage example: lnlog personal/dotfiles.md
+# usage example: lnlog $DEVLOGS_PATH/personal/dotfiles.md
 lnlog() {
-    log_relpath="$1"
-    log_path="$DEVLOGS_DIR/$log_relpath"
+    log_path="$1"
     log_dirname=$(dirname "$log_path")
-    log_extension=$(echo "$log_relpath" | sed 's/.*\.//')
-    notes_basename="vgp-notes.$log_extension"
+    log_extension="${log_path/*./.}"
+    [[ "$log_extension" == "$log_path" ]] && log_extension='' # no extension case
+    notes_basename="vgp-notes$log_extension"
+    log_shortpath="${log_path/*dev-logs/dev-logs}"
 
-    if [[ ! -d "$log_dirname/" ]]; then
+    if [[ -z "$log_path" ]]; then
+        echo "lnlog error: no path given"
+        echo "lnlog usage example: lnlog \$DEVLOGS_PATH/personal/dotfiles.md"
+        return 1
+    elif [[ ! "$log_path" =~ ^.*dev-logs/.+$ ]]; then
+        echo "lnlog error: path must be a file within dev-logs/"
+        echo "lnlog usage example: lnlog \$DEVLOGS_PATH/personal/dotfiles.md"
+        return 1
+    elif [[ ! -d "$log_dirname/" ]]; then
         echo "lnlog error: no '$log_dirname' directory"
         return 1
     elif [[ -h "$notes_basename" ]]; then
@@ -21,20 +28,20 @@ lnlog() {
             # notes exist, but they're not kept in dev-logs yet
             mv -n "$notes_basename" "$log_path"
             ln -s "$log_path" "$notes_basename"
-            echo "lnlog: moved '$notes_basename' to 'dev-logs/$log_relpath', then linked that"
+            echo "lnlog: moved '$notes_basename' to '$log_shortpath', then linked it here"
         else
             # both notes and dev-log exist
-            echo "lnlog error: cannot clobber existing 'dev-logs/$log_relpath' with '$notes_basename'"
+            echo "lnlog error: cannot clobber existing '$log_shortpath' with '$notes_basename'"
             return 1
         fi
     elif [[ -f "$log_path" ]]; then
         # dev-log already exists, but it's not linked here yet
         ln -s "$log_path" "$notes_basename"
-        echo "lnlog: linked existing 'dev-logs/$log_relpath' on '$notes_basename'"
+        echo "lnlog: linked existing '$log_shortpath' on '$notes_basename'"
     else
         # brand new dev-log
         touch "$log_path"
         ln -s "$log_path" "$notes_basename"
-        echo "lnlog: created 'dev-logs/$log_relpath', linked it on '$notes_basename'"
+        echo "lnlog: created '$log_shortpath', linked it on '$notes_basename'"
     fi
 }
