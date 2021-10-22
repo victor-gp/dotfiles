@@ -17,7 +17,6 @@ plugins=(
   bgnotify
   zsh-autosuggestions
   zsh-syntax-highlighting
-  my-patches
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -39,17 +38,17 @@ bindkey -v 'kj' vi-cmd-mode
 
 # revert unwanted default set by OMZ
 unset LESS
+
 alias gitp='GIT_PAGER="less -FRX" git'
 
 type pbcopy &> /dev/null || alias pbcopy='xsel --clipboard --input'
 type pbpaste &> /dev/null || alias pbpaste='xsel --clipboard --output'
-# contextual clipboard
 pb() {
     # if fd 0 (stdin) not a terminal (so a pipe); then copy; else paste
     [[ ! -t 0 ]] && pbcopy || pbpaste
 }
 
-# vi yank also copies to clipboard
+# vi-yank also copies to pasteboard
 vi-yank-pbcopy() {
     zle vi-yank
     echo "$CUTBUFFER" | pbcopy
@@ -69,8 +68,6 @@ alias rm='rm -I'
 
 # don't clear scrollback/history
 alias clear='clear -x'
-
-source ~/.functions
 
 # interactive-only features of pyenv
 [[ -d "$HOME/.pyenv" ]] && eval "$(pyenv init -)"

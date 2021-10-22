@@ -41,7 +41,7 @@ ZSH_HIGHLIGHT_PATTERNS+=('sudo ' 'fg=208')
 
 ### for zsh-autosuggestions
 
-# fix behavior when ctrl+v plus right arrow
+# fix behavior when paste plus right arrow
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=bracketed-paste
 # disable autosuggestion for large buffers
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=25

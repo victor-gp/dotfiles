@@ -5,17 +5,18 @@ lnlog() {
     log_path="$1"
     log_dirname=$(dirname "$log_path")
     log_extension="${log_path/*./.}"
-    [[ "$log_extension" == "$log_path" ]] && log_extension='' # no extension case
+    # corner case: no file extension
+    [[ "$log_extension" == "$log_path" ]] && log_extension=''
     notes_basename="vgp-notes$log_extension"
     log_shortpath="${log_path/*dev-logs/dev-logs}"
 
     if [[ -z "$log_path" ]]; then
-        echo "lnlog error: no path given"
-        echo "lnlog usage example: lnlog \$DEVLOGS_PATH/personal/dotfiles.md"
+        echo 'lnlog error: no path given'
+        echo 'lnlog usage example: lnlog $DEVLOGS_PATH/personal/dotfiles.md'
         return 1
     elif [[ ! "$log_path" =~ ^.*dev-logs/.+$ ]]; then
-        echo "lnlog error: path must be a file within dev-logs/"
-        echo "lnlog usage example: lnlog \$DEVLOGS_PATH/personal/dotfiles.md"
+        echo 'lnlog error: path must be a file within dev-logs/'
+        echo 'lnlog usage example: lnlog $DEVLOGS_PATH/personal/dotfiles.md'
         return 1
     elif [[ ! -d "$log_dirname/" ]]; then
         echo "lnlog error: no '$log_dirname' directory"
