@@ -29,3 +29,8 @@
 	line-numbers = true
 	commit-decoration-style = bold yellow ul
 	width = 96
+	features = contrast-tweaks
+[delta "contrast-tweaks"]
+	line-numbers-minus-style = "#c00000"
+	plus-emph-style = "syntax #005000"
+	minus-emph-style = "auto #7e0e0f"
