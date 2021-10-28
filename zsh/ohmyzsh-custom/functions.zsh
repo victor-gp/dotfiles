@@ -46,3 +46,14 @@ lnlog() {
         echo "lnlog: created '$log_shortpath', linked it on '$notes_basename'"
     fi
 }
+
+# paginated --help
+help() {
+    if [ "$#" -eq 0 ]; then
+        >&2 echo "$0: no argument provided"
+        >&2 echo "usage: $0 COMMAND [SUBCOMMAND]..."
+	    return 2
+    fi
+
+    "$@" --help | less -R
+}
