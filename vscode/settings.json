@@ -41,31 +41,32 @@
     "todo-tree.filtering.ignoreGitSubmodules": true,
     "todo-tree.highlights.defaultHighlight": {
         "type": "tag-and-comment",
-        "foreground": "black",
-        "iconColour": "mediumpurple",
+        "foreground": "#000000",
+        "iconColour": "#9370db",
     },
     "todo-tree.highlights.customHighlight": {
+        // nice: less saturated colors? (nice, fixme, maybe tsk)
         "TODO": {
-            "background": "khaki",
-            "rulerColour": "darkkhaki",
+            "background": "#f0e68c",
+            "rulerColour": "#bdb76b",
             "icon": "tasklist"
         },
         "NICE": {
-            "background": "teal",
-            "foreground": "whitesmoke",
+            "background": "#008080",
+            "foreground": "#f5f5f5",
             "icon": "gift"
         },
         // todo: phase wtf out
         "WTF": {
-            "background": "chocolate",
+            "background": "#d2691e",
             "icon": "thumbsdown"
         },
         "TSK": {
-            "background": "chocolate",
+            "background": "#d2691e",
             "icon": "thumbsdown"
         },
         "FIXME": {
-            "background": "crimson",
+            "background": "#dc143c",
             "icon": "alert"
         }
     },
