@@ -36,7 +36,7 @@
     "material-icon-theme.activeIconPack": "react",
     "workbench.tree.indent": 16,
     "workbench.list.horizontalScrolling": true,
-    "todo-tree.general.tags": ["FIXME", "TODO", "WTF", "NICE"],
+    "todo-tree.general.tags": ["FIXME", "TODO", "TSK", "WTF", "NICE"],
     "todo-tree.regex.regexCaseSensitive": false,
     "todo-tree.filtering.ignoreGitSubmodules": true,
     "todo-tree.highlights.defaultHighlight": {
@@ -55,7 +55,12 @@
             "foreground": "whitesmoke",
             "icon": "gift"
         },
+        // todo: phase wtf out
         "WTF": {
+            "background": "chocolate",
+            "icon": "thumbsdown"
+        },
+        "TSK": {
             "background": "chocolate",
             "icon": "thumbsdown"
         },
