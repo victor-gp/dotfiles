@@ -1,7 +1,6 @@
 " source $VIMRUNTIME/defaults.vim
 
 set showcmd
-set mouse=a
 set whichwrap+=h,l,<,>,[,]
 set scrolloff=3
 
