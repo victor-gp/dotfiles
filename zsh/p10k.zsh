@@ -12,31 +12,31 @@
 #   for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done
 
 # custom color scheme
-black='0'
-red='1'
-green='2'
-yellow='3'
-blue='4'
-magenta='5'
-cyan='6'
-white='7'
-light_black='8'
-light_red='9'
-light_green='10'
-light_yellow='11'
-light_blue='12'
-light_magenta='13'
-light_cyan='14'
-light_white='15'
-snazzy_black='236'
-snazzy_red='203'
-snazzy_green='84'
-snazzy_yellow='228' # alt: 229
-snazzy_blue='81'
-snazzy_magenta='205' # alt: 206
-snazzy_cyan='123' # alt: 159
-snazzy_white='255'
-dark_gray='239'
+black=0
+red=1
+green=2
+yellow=3
+blue=4
+magenta=5
+cyan=6
+white=7
+light_black=8
+light_red=9
+light_green=10
+light_yellow=11
+light_blue=12
+light_magenta=13
+light_cyan=14
+light_white=15
+snazzy_black=236
+snazzy_red=203
+snazzy_green=84 # alt: 78, 121
+snazzy_yellow=229 # alt: 228
+snazzy_blue=81
+snazzy_magenta=205 # alt: 206, 212
+snazzy_cyan=123 # alt: 159
+snazzy_white=255
+dark_gray=239
 
 # Temporarily change options.
 'builtin' 'local' '-a' 'p10k_config_opts'
@@ -232,7 +232,7 @@ dark_gray='239'
   # Replace removed segment suffixes with this symbol.
   typeset -g POWERLEVEL9K_SHORTEN_DELIMITER=
   # Color of the shortened directory segments.
-  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=$blue
+  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=$snazzy_blue
   # Color of the anchor directory segments. Anchor segments are never shortened. The first
   # segment is always an anchor.
   typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=$snazzy_blue
