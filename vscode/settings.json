@@ -56,11 +56,6 @@
             "foreground": "#f5f5f5",
             "icon": "gift"
         },
-        // todo: phase wtf out
-        "WTF": {
-            "background": "#d2691e",
-            "icon": "thumbsdown"
-        },
         "TSK": {
             "background": "#d2691e",
             "icon": "thumbsdown"
