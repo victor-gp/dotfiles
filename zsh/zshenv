@@ -24,4 +24,7 @@ export NVM_DIR="$HOME/.nvm"
 export SDKMAN_DIR="/home/victor-gp/.sdkman"
 [[ -s "/home/victor-gp/.sdkman/bin/sdkman-init.sh" ]] && source "/home/victor-gp/.sdkman/bin/sdkman-init.sh"
 
+# GHC/Haskell version manager
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
+
 export PATH
