@@ -99,4 +99,5 @@
     },
     "ruby.useBundler": true,
     "ruby.useLanguageServer": true,
+    "python.analysis.typeCheckingMode": "basic",
 }
