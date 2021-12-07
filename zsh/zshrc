@@ -28,13 +28,14 @@ source $ZSH/oh-my-zsh.sh
 ### my config
 
 bindkey -v # viins (vi INSERT) keymap
+bindkey -v 'jk' vi-cmd-mode # jk/kj to escape to Normal mode
+bindkey -v 'kj' vi-cmd-mode
 export KEYTIMEOUT=20 # reduce delay on mode changes
 
 bindkey -v '^R' history-incremental-search-backward # ctrl+R to search history
 bindkey -v '^S' history-incremental-search-forward # ctrl+S to reverse search
 bindkey -v '^U' kill-whole-line # ctrl+U to discard line
-bindkey -v 'jk' vi-cmd-mode # jk/kj to escape to Normal mode
-bindkey -v 'kj' vi-cmd-mode
+bindkey -v '\e.' insert-last-word # alt+. to insert last arg from previous command
 
 # revert unwanted default set by OMZ
 unset LESS
