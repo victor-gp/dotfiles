@@ -65,6 +65,7 @@ alias ls='ls --color=tty --group-directories-first'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -I'
+setopt rmstarsilent # disable zsh's version of rm -I
 
 # don't clear scrollback/history
 alias clear='clear -x'
