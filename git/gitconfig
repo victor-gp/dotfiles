@@ -13,6 +13,7 @@
 	pushu = !git push --set-upstream origin $(git symbolic-ref --short HEAD)
 	pushf = push --force-with-lease
 	comma = commit --amend
+	diffs = diff --staged
 [pull]
 	rebase = true
 [rebase]
