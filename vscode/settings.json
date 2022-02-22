@@ -101,4 +101,6 @@
     "ruby.useLanguageServer": true,
     "python.analysis.typeCheckingMode": "basic",
     "editor.minimap.enabled": false,
+    // "workbench.sideBar.location": "right",
+    "window.openFoldersInNewWindow": "on",
 }
