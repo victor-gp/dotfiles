@@ -8,12 +8,14 @@
 	log = LESS=R less
 	diff = delta | LESS=R less
 	show = delta | LESS=R less
+	logb = LESS=R bat -pl gitlog --theme 'Solarized (dark)'
 [alias]
 	logo = log --oneline
 	pushu = !git push --set-upstream origin $(git symbolic-ref --short HEAD)
 	pushf = push --force-with-lease
 	comma = commit --amend
 	diffs = diff --staged
+	logb = log --color=never # clear color before piping to bat
 [pull]
 	rebase = true
 [rebase]
