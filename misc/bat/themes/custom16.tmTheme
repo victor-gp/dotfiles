@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <!--
+        Just a few hyper-specific scope selectors to bat-color some commands.
+        -->
+        <key>author</key>
+        <string>Víctor González Prieto</string>
+        <key>name</key>
+        <string>Custom16</string>
+        <key>colorSpaceName</key>
+        <string>sRGB</string>
+        <key>settings</key>
+        <array>
+            <dict>
+                <key>settings</key>
+                <dict>
+                    <key>background</key>
+                    <string>#00000000</string> <!-- black / background -->
+                    <key>foreground</key>
+                    <string>#09000000</string> <!-- bright red -->
+                    <!--todo
+                    fix Git Log sublime syntax to properly scope refnames
+                    like "(HEAD -> main)" or "(origin/main)"
+                    then reset this foreground setting to #0f
+                    -->
+                    <key>invisibles</key>
+                    <string>#0f000000</string> <!-- white / foreground -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Commit Header Boilerplate</string>
+                <key>scope</key>
+                <string>
+                    keyword.other.commit.git.log,
+                    keyword.other.header.git.log,
+                    punctuation.separator.mapping.pair.git.log
+                </string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#02000000</string> <!-- green -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Commit Header Data</string>
+                <key>scope</key>
+                <string>
+                    constant.other.hash.git.log,
+                    string.unquoted.log
+                </string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#06000000</string> <!-- cyan -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Commit Message Subject</string>
+                <key>scope</key>
+                <string>meta.subject.git.commit</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#03000000</string> <!-- yellow -->
+                    <!--
+                    <key>fontStyle</key>
+                    <string>bold</string>
+                    -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Commit Message Body</string>
+                <key>scope</key>
+                <string>meta.message.git.commit</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#08000000</string> <!-- "bright black" -->
+                </dict>
+            </dict>
+        </array>
+    </dict>
+</plist>
