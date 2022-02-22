@@ -23,6 +23,8 @@
 	algorithm = histogram
 [merge]
 	ff = false
+[stash]
+	showPatch = true
 [interactive]
 	diffFilter = delta --color-only
 [delta]
