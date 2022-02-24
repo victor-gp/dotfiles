@@ -32,3 +32,7 @@ set wrap
 set linebreak " don't break in the middle of a word
 let &showbreak = '﬌ ' " wrapped line marker
 set breakindent " visually indent wrapped lines
+
+" no tabs
+:set expandtab
+:set tabstop=4
