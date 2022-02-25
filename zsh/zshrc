@@ -73,3 +73,5 @@ alias clear='clear -x'
 
 # interactive-only features of pyenv
 [[ -d "$HOME/.pyenv" ]] && eval "$(pyenv init -)"
+
+source functions.sh
