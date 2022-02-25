@@ -5,8 +5,8 @@ alias gitp='GIT_PAGER="less -FRX" git'
 type pbcopy &> /dev/null || alias pbcopy='xsel --clipboard --input'
 type pbpaste &> /dev/null || alias pbpaste='xsel --clipboard --output'
 pb() {
-    # if fd 0 (stdin) not a terminal (so a pipe); then copy; else paste
-    [[ ! -t 0 ]] && pbcopy || pbpaste
+    # cond: stdin (fd 0) not a terminal (so a pipe)
+    if [[ ! -t 0 ]]; then pbcopy; else pbpaste; fi
 }
 
 alias vscode="$(which code)"
@@ -31,7 +31,7 @@ setopt rmstarsilent # disable zsh's version of rm -I
 # don't clear scrollback/history
 alias clear='clear -x'
 
-# usage example: lnlog $DEVLOGS_PATH/personal/dotfiles.md
+# usage example: lnlog DEVLOGS_DIR/personal/dotfiles.md
 lnlog() {
     log_path="$1"
     log_dirname=$(dirname "$log_path")
@@ -43,11 +43,11 @@ lnlog() {
 
     if [[ -z "$log_path" ]]; then
         >&2 echo 'lnlog error: no path given'
-        >&2 echo 'usage example: lnlog $DEVLOGS_PATH/personal/dotfiles.md'
+        >&2 echo 'usage example: lnlog DEVLOGS_DIR/personal/dotfiles.md'
         return 2
-    elif [[ ! "$log_path" =~ ^.*dev-logs/.+$ ]]; then
+    elif [[ ! "$log_path" =~ .*dev-logs/.+$ ]]; then
         >&2 echo 'lnlog error: path must be a file within dev-logs/'
-        >&2 echo 'usage example: lnlog $DEVLOGS_PATH/personal/dotfiles.md'
+        >&2 echo 'usage example: lnlog DEVLOGS_DIR/personal/dotfiles.md'
         return 2
     elif [[ ! -d "$log_dirname/" ]]; then
         >&2 echo "lnlog error: no '$log_dirname' directory"
