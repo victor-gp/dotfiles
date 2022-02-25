@@ -1,5 +1,36 @@
 #!/bin/bash
 
+alias gitp='GIT_PAGER="less -FRX" git'
+
+type pbcopy &> /dev/null || alias pbcopy='xsel --clipboard --input'
+type pbpaste &> /dev/null || alias pbpaste='xsel --clipboard --output'
+pb() {
+    # if fd 0 (stdin) not a terminal (so a pipe); then copy; else paste
+    [[ ! -t 0 ]] && pbcopy || pbpaste
+}
+
+alias vscode="$(which code)"
+alias code='cd code'
+
+# vi-yank also copies to pasteboard
+vi-yank-pbcopy() {
+    zle vi-yank
+    echo "$CUTBUFFER" | pbcopy
+}
+zle -N vi-yank-pbcopy
+bindkey -M vicmd 'y' vi-yank-pbcopy
+
+alias ls='ls --color=tty --group-directories-first'
+
+# prompt before removing files
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -I'
+setopt rmstarsilent # disable zsh's version of rm -I
+
+# don't clear scrollback/history
+alias clear='clear -x'
+
 # usage example: lnlog $DEVLOGS_PATH/personal/dotfiles.md
 lnlog() {
     log_path="$1"
@@ -58,3 +89,5 @@ help() {
 
     "$@" --help | less -R
 }
+
+# help() must be at the end so it picks up any other function or alias
