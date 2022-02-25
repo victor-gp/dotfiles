@@ -19,13 +19,14 @@ bindkey -M vicmd 'y' vi-yank-pbcopy
 
 # usage example: lnlog DEVLOGS_DIR/personal/dotfiles.md
 lnlog() {
-    log_path="$1"
+    local log_path="$1"
+    local log_dirname
     log_dirname=$(dirname "$log_path")
-    log_extension="${log_path/*./.}"
+    local log_extension="${log_path/*./.}"
     # corner case: no file extension
     [[ "$log_extension" == "$log_path" ]] && log_extension=''
-    notes_basename="vgp-notes$log_extension"
-    log_shortpath="${log_path/*dev-logs/dev-logs}"
+    local notes_basename="vgp-notes$log_extension"
+    local log_shortpath="${log_path/*dev-logs/dev-logs}"
 
     if [[ -z "$log_path" ]]; then
         >&2 echo 'lnlog error: no path given'
