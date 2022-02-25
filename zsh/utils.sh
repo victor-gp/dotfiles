@@ -75,5 +75,3 @@ help() {
 
     "$@" --help | less -R
 }
-
-# help() must be at the end so it picks up any other function or alias

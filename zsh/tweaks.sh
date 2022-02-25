@@ -1,6 +1,7 @@
 #!/bin/bash
 
-alias vscode="$(which code)"
+vscode_path="$(which code)"
+vscode() { "$vscode_path" "$@"; }
 alias code='cd code'
 
 # revert unwanted default set by OMZ
