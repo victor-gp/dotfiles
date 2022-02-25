@@ -40,5 +40,5 @@ bindkey -v '\e.' insert-last-word # alt+. to insert last arg from previous comma
 # interactive-only features of pyenv
 [[ -d "$HOME/.pyenv" ]] && eval "$(pyenv init -)"
 
-source tweaks.sh
-source utils.sh
+source ~/.zsh/tweaks.sh
+source ~/.zsh/utils.sh
