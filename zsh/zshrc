@@ -37,10 +37,8 @@ bindkey -v '^S' history-incremental-search-forward # ctrl+S to reverse search
 bindkey -v '^U' kill-whole-line # ctrl+U to discard line
 bindkey -v '\e.' insert-last-word # alt+. to insert last arg from previous command
 
-# revert unwanted default set by OMZ
-unset LESS
-
 # interactive-only features of pyenv
 [[ -d "$HOME/.pyenv" ]] && eval "$(pyenv init -)"
 
-source utils.sh # aliases and functions
+source tweaks.sh
+source utils.sh

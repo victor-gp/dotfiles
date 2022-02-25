@@ -9,9 +9,6 @@ pb() {
     if [[ ! -t 0 ]]; then pbcopy; else pbpaste; fi
 }
 
-alias vscode="$(which code)"
-alias code='cd code'
-
 # vi-yank also copies to pasteboard
 vi-yank-pbcopy() {
     zle vi-yank
@@ -19,17 +16,6 @@ vi-yank-pbcopy() {
 }
 zle -N vi-yank-pbcopy
 bindkey -M vicmd 'y' vi-yank-pbcopy
-
-alias ls='ls --color=tty --group-directories-first'
-
-# prompt before removing files
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='rm -I'
-setopt rmstarsilent # disable zsh's version of rm -I
-
-# don't clear scrollback/history
-alias clear='clear -x'
 
 # usage example: lnlog DEVLOGS_DIR/personal/dotfiles.md
 lnlog() {
