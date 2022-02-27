@@ -103,4 +103,5 @@
     "editor.minimap.enabled": false,
     // "workbench.sideBar.location": "right",
     "window.openFoldersInNewWindow": "on",
+    "scm.diffDecorationsGutterWidth": 2,
 }
