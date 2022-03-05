@@ -104,4 +104,7 @@
     // "workbench.sideBar.location": "right",
     "window.openFoldersInNewWindow": "on",
     "scm.diffDecorationsGutterWidth": 2,
+    "markdownlint.config": {
+        "MD026": false,
+    },
 }
