@@ -19,14 +19,25 @@
                     <key>background</key>
                     <string>#00000000</string> <!-- black / background -->
                     <key>foreground</key>
-                    <string>#09000000</string> <!-- bright red -->
-                    <!--todo
-                    fix Git Log sublime syntax to properly scope refnames
-                    like "(HEAD -> main)" or "(origin/main)"
-                    then reset this foreground setting to #0f
-                    -->
+                    <string>#0f000000</string> <!-- white / foreground -->
                     <key>invisibles</key>
                     <string>#0f000000</string> <!-- white / foreground -->
+                </dict>
+            </dict>
+            <dict>
+                <!--todo
+                fix Git Log sublime syntax to properly scope refnames
+                like "(HEAD -> main)" or "(origin/main)"
+                then drop this hacky patch
+                -->
+                <key>name</key>
+                <string>git log: default foreground</string>
+                <key>scope</key>
+                <string>text.git.log</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#09000000</string> <!-- bright red -->
                 </dict>
             </dict>
             <dict>
@@ -82,18 +93,6 @@
                 <dict>
                     <key>foreground</key>
                     <string>#08000000</string> <!-- "bright black" -->
-                </dict>
-            </dict>
-            <dict>
-                <!-- todo: remove this patch to red foreground -->
-                <key>name</key>
-                <string>command help: text</string>
-                <key>scope</key>
-                <string>text.cmd-help</string>
-                <key>settings</key>
-                <dict>
-                    <key>foreground</key>
-                    <string>#0f000000</string> <!-- white -->
                 </dict>
             </dict>
             <dict>
