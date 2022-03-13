@@ -17,3 +17,6 @@ setopt rmstarsilent # disable zsh's version of rm -I
 
 # don't clear scrollback/history
 alias clear='clear -x'
+
+# colorize man pages
+export MANPAGER="sh -c 'col -bx | bat --no-config -p --language=man'"
