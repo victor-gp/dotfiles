@@ -3,7 +3,7 @@
 <plist version="1.0">
     <dict>
         <!--
-        Just a few hyper-specific scope selectors to bat-color some commands.
+        Just a few hyper-specific scope selectors to bat-colorize some commands.
         -->
         <key>author</key>
         <string>Víctor González Prieto</string>
@@ -139,7 +139,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#06000000</string> <!-- cyan -->
+                    <string>#05000000</string> <!-- magenta -->
                 </dict>
             </dict>
             <dict>
@@ -150,7 +150,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#0c000000</string> <!-- bright blue -->
+                    <string>#0e000000</string> <!-- bright cyan -->
                 </dict>
             </dict>
         </array>
