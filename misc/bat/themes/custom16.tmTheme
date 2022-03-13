@@ -84,6 +84,76 @@
                     <string>#08000000</string> <!-- "bright black" -->
                 </dict>
             </dict>
+            <dict>
+                <!-- todo: remove this patch to red foreground -->
+                <key>name</key>
+                <string>command help: text</string>
+                <key>scope</key>
+                <string>text.cmd-help</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#0f000000</string> <!-- white -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>command help: section heading</string>
+                <key>scope</key>
+                <string>entity.name.section.cmd-help</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#03000000</string> <!-- yellow -->
+                    <!-- I wanted fontStyle=bold but then it becomes bright yellow... -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>command help: inline usage</string>
+                <key>scope</key>
+                <string>entity.name.section.inline-usage.cmd-help</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#03000000</string> <!-- yellow -->
+                    <key>fontStyle</key>
+                    <string>italic</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>command help: option definition</string>
+                <key>scope</key>
+                <string>entity.name.function.option.cmd-help</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#02000000</string> <!-- green -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>command help: option argument</string>
+                <key>scope</key>
+                <string>variable.parameter.option-argument.cmd-help</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#06000000</string> <!-- cyan -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>command help: end of options</string>
+                <key>scope</key>
+                <string>keyword.control.end-of-options.cmd-help</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#0c000000</string> <!-- bright blue -->
+                </dict>
+            </dict>
         </array>
     </dict>
 </plist>

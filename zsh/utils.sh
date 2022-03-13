@@ -66,7 +66,7 @@ lnlog() (
 )
 
 # paginated & colorized --help
-alias bathelp="bat --no-config -p --language=cmd-help --pager='less -R'"
+alias bathelp="bat -p --language=cmd-help --theme=custom16 --pager='less -R'"
 help() (
     if [ "$#" -eq 0 ]; then
         >&2 echo "$0 error: no argument provided"
@@ -76,6 +76,5 @@ help() (
 
     "$@" --help | bathelp
 
-    #todo: custom16 theming for cmd-help scopes
     #todo: on error, try "$@ -h", then "{first token} help {the rest}"
 )
