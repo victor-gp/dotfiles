@@ -25,18 +25,12 @@ visible-name='default'
 
 [profiles/777d0b81-a568-4629-8232-6fbec962ff93]
 background-color='#1C1B19'
-badge-color-set=false
-bold-color-set=false
-cursor-background-color='#FBB829'
 cursor-blink-mode='on'
-cursor-colors-set=false
-cursor-foreground-color='#1C1B19'
 cursor-shape='underline'
 default-size-columns=111
 default-size-rows=22
 font='UbuntuMono Nerd Font Mono 13'
 foreground-color='#FCE8C3'
-highlight-colors-set=false
 palette=['#1C1B19', '#EF2F27', '#519F50', '#FBB829', '#2C78BF', '#E02C6D', '#0AAEB3', '#BAA67F', '#918175', '#F75341', '#98BC37', '#FED06E', '#68A8E4', '#FF5C8F', '#2BE4D0', '#FCE8C3']
 terminal-bell='none'
 use-system-font=false
