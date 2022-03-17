@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# git with default pagination
 alias gitp='GIT_PAGER="less -FRX" git'
 
 type pbcopy &> /dev/null || alias pbcopy='xsel --clipboard --input'

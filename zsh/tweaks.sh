@@ -20,3 +20,6 @@ alias clear='clear -x'
 
 # colorize man pages
 export MANPAGER="sh -c 'col -bx | bat --no-config -p --language=man'"
+
+# bat always shows on a new screen
+export BAT_PAGER="less -R"
