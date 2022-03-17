@@ -78,3 +78,15 @@ help() (
 
     #todo: on error, try "$@ -h", then "{first token} help {the rest}"
 )
+
+# usage: remindme MINUTES WORD... &
+remindme() (
+    time="$(( $1 * 60 ))" # minutes to seconds
+    shift
+    msg="$*"
+    sleep "$time"
+    notify-send \
+        --urgency=critical \
+        --icon=dialog-information \
+        "$msg"
+)
