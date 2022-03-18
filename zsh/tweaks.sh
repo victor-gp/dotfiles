@@ -19,7 +19,7 @@ setopt rmstarsilent # disable zsh's version of rm -I
 alias clear='clear -x'
 
 # colorize man pages
-export MANPAGER="sh -c 'col -bx | bat --no-config -p --language=man'"
+export MANPAGER="sh -c 'col -bx | bat -p --language=man --theme=custom16'"
 
 # bat always shows on a new screen
 export BAT_PAGER="less -R"

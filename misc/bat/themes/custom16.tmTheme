@@ -2,13 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
     <dict>
-        <!--
-        Just a few hyper-specific scope selectors to bat-colorize some commands.
-        -->
-        <key>author</key>
-        <string>Víctor González Prieto</string>
         <key>name</key>
         <string>Custom16</string>
+        <!-- Very specific scope selectors to bat-colorize some commands. -->
+        <key>author</key>
+        <string>Víctor González Prieto</string>
         <key>colorSpaceName</key>
         <string>sRGB</string>
         <key>settings</key>
@@ -24,6 +22,9 @@
                     <string>#0f000000</string> <!-- white / foreground -->
                 </dict>
             </dict>
+
+            <!--/// git log /////////////////////////////////////////////////////////////////////-->
+
             <dict>
                 <!--todo
                 fix Git Log sublime syntax to properly scope refnames
@@ -95,6 +96,9 @@
                     <string>#08000000</string> <!-- "bright black" -->
                 </dict>
             </dict>
+
+            <!--/// cmd help ////////////////////////////////////////////////////////////////////-->
+
             <dict>
                 <key>name</key>
                 <string>command help: section heading</string>
@@ -151,6 +155,186 @@
                 <dict>
                     <key>foreground</key>
                     <string>#0e000000</string> <!-- bright cyan -->
+                </dict>
+            </dict>
+
+            <!--/// man /////////////////////////////////////////////////////////////////////////-->
+
+            <dict>
+                <key>name</key>
+                <string>man: command name</string>
+                <key>scope</key>
+                <string>meta.preprocessor.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#06000000</string> <!-- cyan -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: operator</string>
+                <key>scope</key>
+                <string>keyword.operator.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <!-- setting this for command/function parens
+                         but I'd rather not colorize operators -->
+                    <string>#06000000</string> <!-- cyan -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: man section number</string>
+                <key>scope</key>
+                <string>string.quoted.other.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#0c000000</string> <!-- bright blue -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: title</string>
+                <key>scope</key>
+                <string>markup.heading.title.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#0c000000</string> <!-- bright blue -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: section name</string>
+                <key>scope</key>
+                <string>
+                    markup.heading.synopsis.man,
+                    markup.heading.other.man
+                </string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#03000000</string> <!-- yellow -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: function</string>
+                <key>scope</key>
+                <string>entity.name.function.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#06000000</string> <!-- cyan -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: number</string>
+                <!-- used as man section number in function names -->
+                <key>scope</key>
+                <string>constant.numeric.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#0c000000</string> <!-- bright blue -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: variable dollar</string>
+                <key>scope</key>
+                <string>punctuation.definition.variable.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#05000000</string> <!-- magenta -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: variable name</string>
+                <key>scope</key>
+                <string>constant.other.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#05000000</string> <!-- magenta -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: command option</string>
+                <key>scope</key>
+                <string>
+                entity.name.command-line-option, <!-- bug in man.sublime-syntax L82 -->
+                entity.name.command-line-option.man
+                </string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#02000000</string> <!-- green -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: command option parameter</string>
+                <key>scope</key>
+                <string>variable.parameter.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#05000000</string> <!-- magenta -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string> man: brackets</string>
+                <key>scope</key>
+                <string>
+                    punctuation.section.brackets.begin.man,
+                    punctuation.section.brackets.end.man
+                </string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#0f000000</string> <!-- white/foreground -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string> man: commas</string>
+                <key>scope</key>
+                <string>punctuation.separator.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#0f000000</string> <!-- white/foreground -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string> man: logical operator</string>
+                <key>scope</key>
+                <string>keyword.operator.logical.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#0f000000</string> <!-- white/foreground -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string> man: C code</string>
+                <key>scope</key>
+                <string>source.c</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#07000000</string> <!-- grey -->
                 </dict>
             </dict>
         </array>
