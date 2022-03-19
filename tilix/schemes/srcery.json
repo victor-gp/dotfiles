@@ -1,0 +1,26 @@
+{
+  "background-color": "#1C1B19",
+  "badge-color": "#2C78BF",
+  "comment": "Color scheme with clearly defined contrasting colors and a slightly earthy tone.",
+  "foreground-color": "#FCE8C3",
+  "name": "srcery",
+  "palette": [
+    "#1C1B19",
+    "#EF2F27",
+    "#519F50",
+    "#FBB829",
+    "#2C78BF",
+    "#E02C6D",
+    "#0AAEB3",
+    "#BAA67F",
+    "#918175",
+    "#F75341",
+    "#98BC37",
+    "#FED06E",
+    "#68A8E4",
+    "#FF5C8F",
+    "#2BE4D0",
+    "#FCE8C3"
+  ],
+  "use-theme-colors": false
+}

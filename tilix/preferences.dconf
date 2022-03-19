@@ -1,0 +1,38 @@
+[/]
+quake-specific-monitor=0
+terminal-title-show-when-single=false
+terminal-title-style='small'
+theme-variant='dark'
+warn-vte-config-issue=false
+
+[keybindings]
+app-preferences='<Primary>comma'
+
+[profiles]
+default='777d0b81-a568-4629-8232-6fbec962ff93'
+list=['2b7c4080-0ddd-46c5-8f23-563fd3ba789d', '777d0b81-a568-4629-8232-6fbec962ff93']
+
+[profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
+cursor-blink-mode='on'
+cursor-shape='underline'
+default-size-columns=111
+default-size-rows=22
+font='UbuntuMono Nerd Font Mono 13'
+terminal-bell='none'
+use-system-font=false
+use-theme-colors=false
+visible-name='default'
+
+[profiles/777d0b81-a568-4629-8232-6fbec962ff93]
+background-color='#1C1B19'
+cursor-blink-mode='on'
+cursor-shape='underline'
+default-size-columns=111
+default-size-rows=22
+font='UbuntuMono Nerd Font Mono 13'
+foreground-color='#FCE8C3'
+palette=['#1C1B19', '#EF2F27', '#519F50', '#FBB829', '#2C78BF', '#E02C6D', '#0AAEB3', '#BAA67F', '#918175', '#F75341', '#98BC37', '#FED06E', '#68A8E4', '#FF5C8F', '#2BE4D0', '#FCE8C3']
+terminal-bell='none'
+use-system-font=false
+use-theme-colors=false
+visible-name='srcery'

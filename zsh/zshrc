@@ -37,8 +37,11 @@ bindkey -v '^S' history-incremental-search-forward # ctrl+S to reverse search
 bindkey -v '^U' kill-whole-line # ctrl+U to discard line
 bindkey -v '\e.' insert-last-word # alt+. to insert last arg from previous command
 
-# interactive-only features of pyenv
-[[ -d "$HOME/.pyenv" ]] && eval "$(pyenv init -)"
-
 source ~/.zsh/tweaks.sh
 source ~/.zsh/utils.sh
+
+# fix PROMPT_COMMAND on Tilix
+[ $TILIX_ID ] || [ $VTE_VERSION ] && source /etc/profile.d/vte.sh
+
+# interactive-only features of pyenv
+[[ -d "$HOME/.pyenv" ]] && eval "$(pyenv init -)"
