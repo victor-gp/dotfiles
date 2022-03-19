@@ -107,4 +107,7 @@
     "markdownlint.config": {
         "MD026": false,
     },
+    "workbench.colorCustomizations": {
+        "editorOverviewRuler.selectionHighlightForeground": "#0000",
+    },
 }
