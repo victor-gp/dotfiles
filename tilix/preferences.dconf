@@ -7,6 +7,8 @@ warn-vte-config-issue=false
 
 [keybindings]
 app-preferences='<Primary>comma'
+session-add-down='<Primary><Super>Down'
+session-add-right='<Primary><Super>Right'
 
 [profiles]
 default='777d0b81-a568-4629-8232-6fbec962ff93'
