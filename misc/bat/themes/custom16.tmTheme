@@ -137,9 +137,12 @@
             </dict>
             <dict>
                 <key>name</key>
-                <string>command help: option argument</string>
+                <string>command help: argument</string>
                 <key>scope</key>
-                <string>variable.parameter.option-argument.cmd-help</string>
+                <string>
+                    variable.parameter.option-argument.cmd-help,
+                    variable.parameter.argument.cmd-help
+                </string>
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
@@ -148,13 +151,27 @@
             </dict>
             <dict>
                 <key>name</key>
-                <string>command help: end of options</string>
+                <string>command help: option operators</string>
                 <key>scope</key>
-                <string>keyword.control.end-of-options.cmd-help</string>
+                <string>
+                    keyword.control.end-of-options.cmd-help,
+                    keyword.control.plus-option.cmd-help
+                </string>
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
                     <string>#0e000000</string> <!-- bright cyan -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>command help: other definition</string>
+                <key>scope</key>
+                <string>keyword.other.def.cmd-help</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#06000000</string> <!-- cyan -->
                 </dict>
             </dict>
 
