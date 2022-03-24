@@ -67,7 +67,7 @@ lnlog() (
 )
 
 # paginated & colorized --help
-alias bathelp="bat -p --language=cmd-help --theme=custom16 --pager='less -R'"
+alias bathelp="bat -p --language=cmd-help --theme=custom16"
 help() (
     if [ "$#" -eq 0 ]; then
         >&2 echo "$0 error: no argument provided"
@@ -75,9 +75,7 @@ help() (
         exit 2
     fi
 
-    "$@" --help | bathelp
-
-    #todo: on error, try "$@ -h", then "{first token} help {the rest}"
+    2>&1 "$@" --help | bathelp
 )
 
 # usage: remindme MINUTES WORD... &
