@@ -1,9 +1,13 @@
 {
-  "background-color": "#1C1B19",
-  "badge-color": "#2C78BF",
-  "comment": "Color scheme with clearly defined contrasting colors and a slightly earthy tone.",
-  "foreground-color": "#FCE8C3",
   "name": "srcery",
+  "comment": "Color scheme with clearly defined contrasting colors and a slightly earthy tone.",
+  "background-color": "#1C1B19",
+  "foreground-color": "#FCE8C3",
+  "cursor-background-color": "#FCE8C3",
+  "cursor-foreground-color": "#1C1B19",
+  "badge-color": "#2C78BF",
+  "use-cursor-color": true,
+  "use-theme-colors": false,
   "palette": [
     "#1C1B19",
     "#EF2F27",
@@ -21,6 +25,5 @@
     "#FF5C8F",
     "#2BE4D0",
     "#FCE8C3"
-  ],
-  "use-theme-colors": false
+  ]
 }

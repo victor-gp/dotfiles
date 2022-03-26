@@ -1,8 +1,10 @@
 [/]
+auto-hide-mouse=true
 quake-specific-monitor=0
 terminal-title-show-when-single=false
 terminal-title-style='small'
 theme-variant='dark'
+unsafe-paste-alert=false
 warn-vte-config-issue=false
 
 [keybindings]
@@ -27,7 +29,10 @@ visible-name='default'
 
 [profiles/777d0b81-a568-4629-8232-6fbec962ff93]
 background-color='#1C1B19'
+cursor-background-color='#FCE8C3'
 cursor-blink-mode='on'
+cursor-colors-set=true
+cursor-foreground-color='#1C1B19'
 cursor-shape='underline'
 default-size-columns=111
 default-size-rows=22
