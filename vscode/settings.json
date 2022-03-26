@@ -90,6 +90,10 @@
     "[scala]": {
         "editor.tabSize": 2,
     },
+    "[haskell]": {
+        "editor.tabSize": 2,
+        "editor.formatOnPaste": false,
+    },
     "workbench.editor.untitled.hint": "hidden",
     "redhat.telemetry.enabled": false,
     "ruby.format": "rubocop",
