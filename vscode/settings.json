@@ -36,7 +36,7 @@
     "material-icon-theme.activeIconPack": "react",
     "workbench.tree.indent": 16,
     "workbench.list.horizontalScrolling": true,
-    "todo-tree.general.tags": ["FIXME", "TODO", "TSK", "WTF", "NICE"],
+    "todo-tree.general.tags": ["FIXME", "TODO", "TSK", "NIT", "NICE"],
     "todo-tree.regex.regexCaseSensitive": false,
     "todo-tree.regex.regex": "((//|#|--|<!--|;|/\\*)\\s*($TAGS)|^\\s*- \\[ \\])",
     "todo-tree.filtering.ignoreGitSubmodules": true,
@@ -52,14 +52,18 @@
             "rulerColour": "#bdb76b",
             "icon": "tasklist"
         },
-        "NICE": {
+        "NICE": { // = nice to have
             "background": "#008080",
             "foreground": "#f5f5f5",
-            "icon": "gift"
+            "icon": "light-bulb"
         },
-        "TSK": {
+        "TSK": { // = poor naming
             "background": "#d2691e",
             "icon": "thumbsdown"
+        },
+        "NIT": { // = nitpick
+            "background": "#d2691e",
+            "icon": "squirrel"
         },
         "FIXME": {
             "background": "#dc143c",
