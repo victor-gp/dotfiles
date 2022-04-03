@@ -38,7 +38,7 @@
     "workbench.list.horizontalScrolling": true,
     "todo-tree.general.tags": ["FIXME", "TODO", "TSK", "NIT", "NICE"],
     "todo-tree.regex.regexCaseSensitive": false,
-    "todo-tree.regex.regex": "((//|#|--|<!--|;|/\\*)\\s*($TAGS)|^\\s*- \\[ \\])",
+    "todo-tree.regex.regex": "((//|#|--|<!--|;|/\\*)\\s*($TAGS)\\b|^\\s*- \\[ \\])",
     "todo-tree.filtering.ignoreGitSubmodules": true,
     "todo-tree.highlights.defaultHighlight": {
         "type": "tag-and-comment",
