@@ -114,4 +114,7 @@
     "workbench.colorCustomizations": {
         "editorOverviewRuler.selectionHighlightForeground": "#0000",
     },
+    "files.associations": {
+        "*.sublime-syntax": "yaml",
+    },
 }
