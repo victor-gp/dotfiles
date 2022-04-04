@@ -26,29 +26,16 @@
             <!--/// git log /////////////////////////////////////////////////////////////////////-->
 
             <dict>
-                <!--todo
-                fix Git Log sublime syntax to properly scope refnames
-                like "(HEAD -> main)" or "(origin/main)"
-                then drop this hacky patch
-                -->
                 <key>name</key>
-                <string>git log: default foreground</string>
-                <key>scope</key>
-                <string>text.git.log</string>
-                <key>settings</key>
-                <dict>
-                    <key>foreground</key>
-                    <string>#09000000</string> <!-- bright red -->
-                </dict>
-            </dict>
-            <dict>
-                <key>name</key>
-                <string>Commit Header Boilerplate</string>
+                <string>commit header: boilerplate</string>
                 <key>scope</key>
                 <string>
                     keyword.other.commit.git.log,
                     keyword.other.header.git.log,
-                    punctuation.separator.mapping.pair.git.log
+                    punctuation.separator.mapping.pair.git.log,
+                    punctuation.section.parens.begin.git.log,
+                    punctuation.section.parens.end.git.log,
+                    punctuation.separator.sequence.git.log
                 </string>
                 <key>settings</key>
                 <dict>
@@ -58,7 +45,7 @@
             </dict>
             <dict>
                 <key>name</key>
-                <string>Commit Header Data</string>
+                <string>commit header: data</string>
                 <key>scope</key>
                 <string>
                     constant.other.hash.git.log,
@@ -72,7 +59,49 @@
             </dict>
             <dict>
                 <key>name</key>
-                <string>Commit Message Subject</string>
+                <string>commmit header: HEAD + arrow</string>
+                <key>scope</key>
+                <string>
+                    support.type.git.log,
+                    punctuation.separator.mapping.git.log
+                </string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#04000000</string> <!-- blue -->
+                    <key>fontStyle</key>
+                    <string>bold</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>commmit header: refs names</string>
+                <key>scope</key>
+                <string>
+                    entity.other.branch-name.git.log
+                </string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#05000000</string> <!-- magenta -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>commmit header: main/master</string>
+                <key>scope</key>
+                <string>
+                    entity.other.branch-name.master.git.log
+                </string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#0d000000</string> <!-- bright magenta -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>commit message: subject</string>
                 <key>scope</key>
                 <string>meta.subject.git.commit</string>
                 <key>settings</key>
@@ -87,13 +116,13 @@
             </dict>
             <dict>
                 <key>name</key>
-                <string>Commit Message Body</string>
+                <string>commit message: body</string>
                 <key>scope</key>
                 <string>meta.message.git.commit</string>
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#08000000</string> <!-- "bright black" -->
+                    <string>#08000000</string> <!-- "bright" black -->
                 </dict>
             </dict>
 

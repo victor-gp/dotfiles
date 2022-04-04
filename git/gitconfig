@@ -8,7 +8,7 @@
 	log = LESS=R less
 	diff = delta | LESS=R less
 	show = delta | LESS=R less
-	logb = LESS= bat -p --language=gitlog --theme=custom16
+	logb = LESS= bat -p --language=gitlog2 --theme=custom16
 [alias]
 	logo = log --oneline
 	pushu = !git push --set-upstream origin $(git symbolic-ref --short HEAD)
