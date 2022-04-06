@@ -1,3 +1,8 @@
+# fork of a syntax in sublimehq/Packages:
+# https://github.com/sublimehq/Packages/blob/653edd49aa3370f027be1c75177e24aaa781e3ac/Git%20Formats/Git%20Log.sublime-syntax
+# license:
+# https://github.com/sublimehq/Packages/blob/653edd49aa3370f027be1c75177e24aaa781e3ac/LICENSE
+
 %YAML 1.2
 ---
 name: Git Log 2
