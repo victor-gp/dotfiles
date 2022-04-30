@@ -14,4 +14,8 @@
       "command": "workbench.action.focusNextGroup",
       "when": "editorFocus"
    },
+   {
+      "key": "shift+alt+t",
+      "command": "editor.action.inspectTMScopes"
+   },
 ]
