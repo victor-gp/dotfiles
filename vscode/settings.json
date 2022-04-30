@@ -117,4 +117,5 @@
     "files.associations": {
         "*.sublime-syntax": "yaml",
     },
+    "emojisense.unicodeCompletionsEnabled": false,
 }
