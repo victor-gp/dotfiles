@@ -37,3 +37,7 @@ set breakindent " visually indent wrapped lines
 :set expandtab
 :set tabstop=4
 :set shiftwidth=4
+
+" don't put x-deleted chars in a register
+nnoremap x "_x
+vnoremap x "_x
