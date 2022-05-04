@@ -15,8 +15,7 @@
     "workbench.colorTheme": "Lucario",
     "editor.formatOnPaste": true,
     "explorer.autoReveal": false,
-    "telemetry.enableTelemetry": false,
-    "python.showStartPage": false,
+    "telemetry.telemetryLevel": "off",
     "workbench.editor.tabSizing": "shrink",
     "files.watcherExclude": {
         "**/.bloop": true,
