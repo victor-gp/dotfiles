@@ -18,4 +18,8 @@
       "key": "shift+alt+t",
       "command": "editor.action.inspectTMScopes"
    },
+   {
+      "key": "alt+v",
+      "command": "toggleVim"
+   },
 ]

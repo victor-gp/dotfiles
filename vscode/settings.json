@@ -118,4 +118,10 @@
         "*.sublime-syntax": "yaml",
     },
     "emojisense.unicodeCompletionsEnabled": false,
+    "vim.vimrc.enable": true,
+    "vim.useSystemClipboard": true,
+    "vim.whichwrap": "b,s,h,l,<,>,[,]",
+    "vim.cursorStylePerMode.normal": "underline",
+    "vim.cursorStylePerMode.replace": "line",
+    "vim.timeout": 400, // ms
 }

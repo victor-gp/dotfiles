@@ -1,7 +1,7 @@
 " source $VIMRUNTIME/defaults.vim
 
 set showcmd
-set whichwrap+=h,l,<,>,[,]
+set whichwrap+=h,l,<,>,[,],b,s
 set scrolloff=3
 
 " matching/search options
@@ -38,6 +38,6 @@ set breakindent " visually indent wrapped lines
 :set tabstop=4
 :set shiftwidth=4
 
-" don't put x-deleted chars in a register
+" don't put x-deleted chars in any register
 nnoremap x "_x
 vnoremap x "_x
