@@ -127,4 +127,8 @@
     "vim.cursorStylePerMode.replace": "line",
     "vim.timeout": 400, // ms
     "editor.bracketPairColorization.enabled": false,
+    "material-icon-theme.files.associations": {
+        "vgp-notes.md": "log",
+        "vgp-notes.txt": "log",
+    },
 }
