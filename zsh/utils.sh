@@ -75,6 +75,7 @@ help() (
         exit 2
     fi
 
+    set -o pipefail
     2>&1 "$@" --help | bathelp
 )
 
