@@ -126,6 +126,10 @@
     "vim.cursorStylePerMode.normal": "underline",
     "vim.cursorStylePerMode.replace": "line",
     "vim.timeout": 400, // ms
+    "vim.normalModeKeyBindingsNonRecursive": [
+        { "before": ["u"], "commands": ["undo"] },
+        { "before": ["C-r"], "commands": ["redo"] },
+    ],
     "editor.bracketPairColorization.enabled": false,
     "material-icon-theme.files.associations": {
         "vgp-notes.md": "log",
