@@ -112,6 +112,9 @@
     },
     "markdownlint.config": {
         "MD026": false,
+        "MD033": {
+            "allowed_elements": [ "img" ]
+        }
     },
     "workbench.colorCustomizations": {
         "editorOverviewRuler.selectionHighlightForeground": "#0000",
