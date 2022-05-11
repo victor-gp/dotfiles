@@ -18,7 +18,7 @@ vi-yank-pbcopy() {
 zle -N vi-yank-pbcopy
 bindkey -M vicmd 'y' vi-yank-pbcopy
 
-# usage example: lnlog DEVLOGS_DIR/personal/dotfiles.md
+# usage: lnlog DEVLOGS_DIR/personal/dotfiles.md
 lnlog() (
     log_path="$1"
     log_dirname=$(dirname "$log_path")
@@ -67,14 +67,10 @@ lnlog() (
 )
 
 # paginated & colorized --help
+# usage: "help <cmd>", "help <cmd> <subcmd>", "help <cmd> -h", "<cmd> --help | bathelp", etc.
 alias bathelp="bat -p --language=cmd-help --theme=custom16"
 help() (
-    if [ "$#" -eq 0 ]; then
-        >&2 echo "$0 error: no argument provided"
-        >&2 echo "usage: $0 COMMAND [SUBCOMMAND]..."
-        exit 2
-    fi
-
+    [ $# -ne 0 ] || exit 2
     set -o pipefail
     2>&1 "$@" --help | bathelp
 )
