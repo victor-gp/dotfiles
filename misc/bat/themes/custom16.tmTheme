@@ -191,7 +191,8 @@
                 <key>scope</key>
                 <string>
                     variable.parameter.option-argument.cmd-help,
-                    variable.parameter.argument.cmd-help
+                    variable.parameter.argument.cmd-help,
+                    variable.parameter.other-value.cmd-help
                 </string>
                 <key>settings</key>
                 <dict>
@@ -226,9 +227,9 @@
             </dict>
             <dict>
                 <key>name</key>
-                <string>command help: other variable/argument definitions</string>
+                <string>command help: file/path definitions</string>
                 <key>scope</key>
-                <string>string.other-variable.cmd-help</string>
+                <string>constant.file.cmd-help</string>
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
