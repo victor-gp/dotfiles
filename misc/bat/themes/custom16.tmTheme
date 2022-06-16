@@ -11,15 +11,36 @@
         <string>sRGB</string>
         <key>settings</key>
         <array>
+            <!--/// color code key //////////////////////////////////////////////////////////////////////
+                color codes: #0x000000 (where x = color hex char)
+
+                0: black (background)
+                1: red
+                2: green
+                3: yellow / orange
+                4: blue
+                5: magenta
+                6: cyan
+                7: clear gray (standard white)
+                8: dark gray (bright black)
+                9: bright red
+                a: bright green
+                b: bright yellow / orange
+                c: bright blue
+                d: bright magenta
+                e: bright cyan
+                f: white (foreground)
+            -->
+
             <dict>
                 <key>settings</key>
                 <dict>
                     <key>background</key>
-                    <string>#00000000</string> <!-- black / background -->
+                    <string>#00000000</string>
                     <key>foreground</key>
-                    <string>#0f000000</string> <!-- white / foreground -->
+                    <string>#0f000000</string>
                     <key>invisibles</key>
-                    <string>#0f000000</string> <!-- white / foreground -->
+                    <string>#0f000000</string>
                 </dict>
             </dict>
 
@@ -40,7 +61,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#02000000</string> <!-- green -->
+                    <string>#02000000</string>
                 </dict>
             </dict>
             <dict>
@@ -54,7 +75,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#06000000</string> <!-- cyan -->
+                    <string>#06000000</string>
                 </dict>
             </dict>
             <dict>
@@ -68,7 +89,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#04000000</string> <!-- blue -->
+                    <string>#04000000</string>
                     <key>fontStyle</key>
                     <string>bold</string>
                 </dict>
@@ -83,7 +104,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#05000000</string> <!-- magenta -->
+                    <string>#05000000</string>
                 </dict>
             </dict>
             <dict>
@@ -96,7 +117,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#0d000000</string> <!-- bright magenta -->
+                    <string>#0d000000</string>
                 </dict>
             </dict>
             <dict>
@@ -107,7 +128,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#03000000</string> <!-- yellow -->
+                    <string>#03000000</string>
                     <!--
                     <key>fontStyle</key>
                     <string>bold</string>
@@ -122,7 +143,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#08000000</string> <!-- "bright" black -->
+                    <string>#08000000</string>
                 </dict>
             </dict>
 
@@ -136,7 +157,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#03000000</string> <!-- yellow -->
+                    <string>#03000000</string>
                     <!-- I wanted fontStyle=bold but then it becomes bright yellow... -->
                 </dict>
             </dict>
@@ -148,7 +169,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#03000000</string> <!-- yellow -->
+                    <string>#03000000</string>
                     <key>fontStyle</key>
                     <string>italic</string>
                 </dict>
@@ -161,7 +182,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#02000000</string> <!-- green -->
+                    <string>#02000000</string>
                 </dict>
             </dict>
             <dict>
@@ -175,7 +196,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#05000000</string> <!-- magenta -->
+                    <string>#05000000</string>
                 </dict>
             </dict>
             <dict>
@@ -189,7 +210,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#0e000000</string> <!-- bright cyan -->
+                    <string>#0e000000</string>
                 </dict>
             </dict>
             <dict>
@@ -200,7 +221,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#06000000</string> <!-- cyan -->
+                    <string>#06000000</string>
                 </dict>
             </dict>
             <dict>
@@ -211,7 +232,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#04000000</string> <!-- blue -->
+                    <string>#04000000</string>
                 </dict>
             </dict>
 
@@ -225,7 +246,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#06000000</string> <!-- cyan -->
+                    <string>#06000000</string>
                 </dict>
             </dict>
             <dict>
@@ -238,7 +259,7 @@
                     <key>foreground</key>
                     <!-- setting this for command/function parens
                          but I'd rather not colorize operators -->
-                    <string>#06000000</string> <!-- cyan -->
+                    <string>#06000000</string>
                 </dict>
             </dict>
             <dict>
@@ -249,7 +270,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#0c000000</string> <!-- bright blue -->
+                    <string>#0c000000</string>
                 </dict>
             </dict>
             <dict>
@@ -260,7 +281,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#0c000000</string> <!-- bright blue -->
+                    <string>#0c000000</string>
                 </dict>
             </dict>
             <dict>
@@ -274,7 +295,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#03000000</string> <!-- yellow -->
+                    <string>#03000000</string>
                 </dict>
             </dict>
             <dict>
@@ -285,7 +306,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#06000000</string> <!-- cyan -->
+                    <string>#06000000</string>
                 </dict>
             </dict>
             <dict>
@@ -297,7 +318,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#0c000000</string> <!-- bright blue -->
+                    <string>#0c000000</string>
                 </dict>
             </dict>
             <dict>
@@ -308,7 +329,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#05000000</string> <!-- magenta -->
+                    <string>#05000000</string>
                 </dict>
             </dict>
             <dict>
@@ -319,7 +340,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#05000000</string> <!-- magenta -->
+                    <string>#05000000</string>
                 </dict>
             </dict>
             <dict>
@@ -333,7 +354,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#02000000</string> <!-- green -->
+                    <string>#02000000</string>
                 </dict>
             </dict>
             <dict>
@@ -344,7 +365,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#05000000</string> <!-- magenta -->
+                    <string>#05000000</string>
                 </dict>
             </dict>
             <dict>
@@ -358,7 +379,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#0f000000</string> <!-- white/foreground -->
+                    <string>#0f000000</string>
                 </dict>
             </dict>
             <dict>
@@ -369,7 +390,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#0f000000</string> <!-- white/foreground -->
+                    <string>#0f000000</string>
                 </dict>
             </dict>
             <dict>
@@ -380,7 +401,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#0f000000</string> <!-- white/foreground -->
+                    <string>#0f000000</string>
                 </dict>
             </dict>
             <dict>
@@ -391,7 +412,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#07000000</string> <!-- grey -->
+                    <string>#07000000</string>
                 </dict>
             </dict>
         </array>
