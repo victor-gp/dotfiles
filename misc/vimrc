@@ -44,6 +44,8 @@ vnoremap x "_x
 
 " on wrapped lines, move cursor by display line instead of physical line
 noremap <silent> k gk
+inoremap <silent> <Up> <C-o>gk
 noremap <silent> j gj
+inoremap <silent> <Down> <C-o>gj
 noremap <silent> 0 g0
 noremap <silent> $ g$
