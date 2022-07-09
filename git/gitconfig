@@ -17,7 +17,7 @@
 	diffs = diff --staged
 	logb = log --color=never # clear color before piping to bat
     draft = !vim /tmp/COMMIT_EDITMSG
-    commid = commit -t /tmp/COMMIT_EDITMSG
+    commid = commit -F /tmp/COMMIT_EDITMSG --edit
 [pull]
 	rebase = true
 [rebase]
