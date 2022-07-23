@@ -138,4 +138,10 @@
         "vgp-notes.md": "log",
         "vgp-notes.txt": "log",
     },
+    "emmet.includeLanguages": {
+        "njk": "html"
+    },
+    "[njk]": {
+        "editor.tabSize": 2,
+    },
 }
