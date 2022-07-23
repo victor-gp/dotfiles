@@ -22,4 +22,9 @@
       "key": "alt+v",
       "command": "toggleVim"
    },
+   {
+      "key": "ctrl+shift+i",
+      "command": "-emojisense.quickEmojitext",
+      "when": "editorTextFocus"
+   },
 ]
