@@ -1,0 +1,27 @@
+{
+    "files.watcherExclude": {
+        "**/target": true
+    },
+    "files.exclude": {
+        "zsh/ohmyzsh-custom/plugins/*": true,
+        "zsh/ohmyzsh-custom/themes/*": true,
+    },
+    "json.schemas": [
+        {
+            "fileMatch": ["/vscode/settings.json"],
+            "url": "vscode://schemas/settings/user"
+        },
+        {
+            "fileMatch": ["/vscode/keybindings.json"],
+            "url": "vscode://schemas/keybindings"
+        },
+    ],
+    "files.associations": {
+        "vimrc": "vimrc",
+    },
+    "material-icon-theme.files.associations": {
+        "git/gitconfig": "git",
+        "git/gitignore": "git",
+        "misc/vimrc": "vim",
+    },
+}
