@@ -11,32 +11,28 @@
 #
 #   for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done
 
-# custom color scheme
-black=0
-red=1
-green=2
-yellow=3
-blue=4
-magenta=5
-cyan=6
-white=7
-light_black=8
-light_red=9
-light_green=10
-light_yellow=11
-light_blue=12
-light_magenta=13
-light_cyan=14
-light_white=15
-snazzy_black=236
-snazzy_red=203
-snazzy_green=84 # alt: 78, 121
-snazzy_yellow=229 # alt: 228
-snazzy_blue=81
-snazzy_magenta=205 # alt: 206, 212
-snazzy_cyan=123 # alt: 159
-snazzy_white=255
-dark_gray=239
+# custom color scheme, based on Snazzy
+custom_black=236
+custom_red=203
+custom_green=84 # alt: 78, 121
+custom_yellow=229 # alt: 228
+custom_blue=81
+custom_magenta=205 # alt: 206, 212
+custom_cyan=123 # alt: 159
+custom_white=255
+
+if [ "$TERM_PROGRAM" = vscode ]; then
+  # use terminal-defined bright colors
+  custom_black=0
+  custom_red=9
+  custom_green=10
+  custom_yellow=11
+  custom_blue=12
+  custom_magenta=13
+  custom_cyan=14
+  custom_white=15
+fi
+
 
 # Temporarily change options.
 'builtin' 'local' '-a' 'p10k_config_opts'
@@ -206,9 +202,9 @@ dark_gray=239
 
   ################################[ prompt_char: prompt symbol ]################################
   # White prompt symbol if the last command succeeded.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=$snazzy_white
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=$custom_white
   # Red prompt symbol if the last command failed.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=$snazzy_red
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=$custom_red
   # Default prompt symbol.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION=''
   # Prompt symbol in command vi mode.
@@ -225,17 +221,17 @@ dark_gray=239
 
   ##################################[ dir: current directory ]##################################
   # Default current directory color.
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$snazzy_blue
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$custom_blue
   # If directory is too long, shorten some of its segments to the shortest possible unique
   # prefix. The shortened directory can be tab-completed to the original.
   typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
   # Replace removed segment suffixes with this symbol.
   typeset -g POWERLEVEL9K_SHORTEN_DELIMITER=
   # Color of the shortened directory segments.
-  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=$snazzy_blue
+  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=$custom_blue
   # Color of the anchor directory segments. Anchor segments are never shortened. The first
   # segment is always an anchor.
-  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=$snazzy_blue
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=$custom_blue
   # Display anchor directory segments in bold.
   typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=true
   # Don't shorten directories that contain any of these files. They are anchors.
@@ -385,13 +381,12 @@ dark_gray=239
 
     if (( $1 )); then
       # Styling for up-to-date Git status.
-      local       meta="%${snazzy_white}F" # white foreground
-      local      clean="%${snazzy_green}F"
-      local    stashed="%${snazzy_cyan}F"
-      local   modified="%${snazzy_yellow}F"
-      local  untracked="%${snazzy_magenta}F"
-      local conflicted="%${snazzy_red}F"
-      local  delimiter="%${dark_gray}F"
+      local       meta="%${custom_white}F" # F=foreground
+      local      clean="%${custom_green}F"
+      local    stashed="%${custom_cyan}F"
+      local   modified="%${custom_yellow}F"
+      local  untracked="%${custom_magenta}F"
+      local conflicted="%${custom_red}F"
     else
       # Styling for incomplete and stale Git status.
       local       meta='%244F'  # grey foreground
@@ -400,8 +395,8 @@ dark_gray=239
       local   modified='%244F'  # grey foreground
       local  untracked='%244F'  # grey foreground
       local conflicted='%244F'  # grey foreground
-      local  delimiter="%${dark_gray}F"
     fi
+    local  delimiter="%239F" # dark gray foreground
 
     local res
 
