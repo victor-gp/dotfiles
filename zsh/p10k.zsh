@@ -465,7 +465,7 @@ fi
 
     if [ "$TERM_PROGRAM" = vscode ]; then
       # put colons around Git status
-      res="${delimiter}:${res}${delimiter}:"
+      res="${delimiter}·${res}${delimiter}·"
     else
       # put square brackets around Git status
       res="${delimiter}[${res}${delimiter}]"
