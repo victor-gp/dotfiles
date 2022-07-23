@@ -463,8 +463,13 @@ fi
     # in this case.
     (( VCS_STATUS_HAS_UNSTAGED == -1 )) && res+=" ${modified}─"
 
-    # put square brackets around Git status
-    res="${delimiter}[${res}${delimiter}]"
+    if [ "$TERM_PROGRAM" = vscode ]; then
+      # put colons around Git status
+      res="${delimiter}:${res}${delimiter}:"
+    else
+      # put square brackets around Git status
+      res="${delimiter}[${res}${delimiter}]"
+    fi
 
     typeset -g my_git_format=$res
   }
