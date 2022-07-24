@@ -27,4 +27,12 @@
       "command": "-emojisense.quickEmojitext",
       "when": "editorTextFocus"
    },
+   {
+      "key": "ctrl+shift+f11",
+      "command": "-themeSwitcher.previousTheme"
+   },
+   {
+      "key": "ctrl+shift+f12",
+      "command": "-themeSwitcher.nextTheme"
+   },
 ]
