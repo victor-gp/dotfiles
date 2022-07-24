@@ -80,17 +80,10 @@
     "python.languageServer": "Pylance",
     "python.analysis.completeFunctionParens": true,
     "editor.tabSize": 4,
-    "[markdown]": {
-        "editor.tabSize": 2,
-    },
-    "[ruby]": {
-        "editor.tabSize": 2,
-    },
-    "[scala]": {
+    "[markdown][ruby][scala][haskell]": {
         "editor.tabSize": 2,
     },
     "[haskell]": {
-        "editor.tabSize": 2,
         "editor.formatOnPaste": false,
     },
     "workbench.editor.untitled.hint": "hidden",
@@ -144,10 +137,7 @@
     "[njk]": {
         "editor.tabSize": 2,
     },
-    "[javascript]": {
-        "editor.bracketPairColorization.enabled": true,
-    },
-    "[javascriptreact]": {
+    "[javascript][javascriptreact]": {
         "editor.bracketPairColorization.enabled": true,
     },
     "terminal.integrated.fontFamily": "'UbuntuMono Nerd Font Mono', monospace",
