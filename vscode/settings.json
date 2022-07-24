@@ -142,6 +142,7 @@
     },
     "terminal.integrated.fontFamily": "'UbuntuMono Nerd Font Mono', monospace",
     "terminal.integrated.fontSize": 16,
+    "terminal.integrated.scrollback": 5000,
     "themeSwitcher.themesList": "Lucario,Dracula,Night Owl (No Italics)",
     "window.titleBarStyle": "custom",
     "workbench.layoutControl.enabled": false,
