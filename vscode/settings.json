@@ -146,4 +146,5 @@
     "themeSwitcher.themesList": "Lucario,Dracula,Night Owl (No Italics)",
     "window.titleBarStyle": "custom",
     "workbench.layoutControl.enabled": false,
+    "git.enableStatusBarSync": false,
 }
