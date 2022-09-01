@@ -23,6 +23,11 @@
       "command": "toggleVim"
    },
    {
+      "key": "alt+f11",
+      "command": "workbench.action.toggleEditorWidths"
+   },
+   // undoing keybindings to free up other keybindings
+   {
       "key": "ctrl+shift+i",
       "command": "-emojisense.quickEmojitext",
       "when": "editorTextFocus"
