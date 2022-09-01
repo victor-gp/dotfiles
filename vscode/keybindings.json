@@ -23,6 +23,14 @@
       "command": "toggleVim"
    },
    {
+      "key": "ctrl+shift+j",
+      "command": "workbench.action.toggleMaximizedPanel"
+   },
+   {
+      "key": "ctrl+shift+[Comma]",
+      "command": "workbench.action.openApplicationSettingsJson"
+   },
+   {
       "key": "alt+f11",
       "command": "workbench.action.toggleEditorWidths"
    },

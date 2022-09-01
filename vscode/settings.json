@@ -110,6 +110,7 @@
         }
     },
     "workbench.colorCustomizations": {
+        // disables highlighting matches of the token under the cursor in the ruler
         "editorOverviewRuler.selectionHighlightForeground": "#0000",
     },
     "files.associations": {
@@ -127,7 +128,9 @@
         { "before": ["C-r"], "commands": ["redo"] },
     ],
     "vim.handleKeys": {
-        "<C-d>": true,
+        "<C-d>": false,
+        "<C-s>": false,
+        "<C-z>": false,
         "<C-f>": false,
         "<C-w>": false,
         "<C-n>": false,
@@ -135,6 +138,7 @@
         "<C-c>": false,
         "<C-x>": false,
         "<C-v>": false,
+        "<C-j>": false,
     },
     "editor.bracketPairColorization.enabled": false,
     "material-icon-theme.files.associations": {
