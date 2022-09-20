@@ -161,7 +161,4 @@
     "window.titleBarStyle": "custom",
     "workbench.layoutControl.enabled": false,
     "git.enableStatusBarSync": false,
-    "timeline.excludeSources": [
-        "timeline.localHistory"
-    ],
 }
