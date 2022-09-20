@@ -35,6 +35,12 @@ export KEYTIMEOUT=20 # reduce delay on mode changes
 bindkey -v '^R' history-incremental-search-backward # ctrl+R to search history
 bindkey -v '^S' history-incremental-search-forward # ctrl+S to reverse search
 bindkey -v '^U' kill-whole-line # ctrl+U to discard line
+kill-to-viins() {
+  zle kill-whole-line
+  zle vi-insert
+}
+zle -N kill-to-viins
+bindkey -a '^U' kill-to-viins # ctrl+U also in Command mode
 bindkey -v '\e.' insert-last-word # alt+. to insert last arg from previous command
 
 source ~/.zsh/tweaks.sh
