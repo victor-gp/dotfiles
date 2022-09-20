@@ -161,4 +161,5 @@
     "window.titleBarStyle": "custom",
     "workbench.layoutControl.enabled": false,
     "git.enableStatusBarSync": false,
+    "window.newWindowDimensions": "maximized",
 }
