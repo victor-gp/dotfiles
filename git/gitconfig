@@ -6,8 +6,8 @@
 	excludesFile = ~/.gitignore
 [pager]
 	log = LESS=R less
-	diff = delta | LESS=R less
-	show = delta | LESS=R less
+	diff = LESS=R delta
+	show = LESS=R delta
 	logb = LESS= bat -p --language=gitlog2 --theme=custom16
 [alias]
 	logo = log --oneline
@@ -27,6 +27,7 @@
 	algorithm = histogram
 [merge]
 	ff = false
+    conflictstyle = diff3
 [stash]
 	showPatch = true
 [interactive]
@@ -34,6 +35,7 @@
 [delta]
 	syntax-theme = gruvbox-dark
 	line-numbers = true
+    navigate = true
 	commit-decoration-style = bold yellow ul
 	width = 96
 	features = contrast-tweaks
