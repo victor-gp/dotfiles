@@ -153,7 +153,7 @@
                 <key>name</key>
                 <string>command help: section heading</string>
                 <key>scope</key>
-                <string>entity.name.section.cmd-help</string>
+                <string>string.section-heading.cmd-help</string>
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
@@ -165,7 +165,7 @@
                 <key>name</key>
                 <string>command help: inline usage</string>
                 <key>scope</key>
-                <string>entity.name.section.inline-usage.cmd-help</string>
+                <string>string.section-heading.inline-usage.cmd-help</string>
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
@@ -176,9 +176,12 @@
             </dict>
             <dict>
                 <key>name</key>
-                <string>command help: option definition</string>
+                <string>command help: option</string>
                 <key>scope</key>
-                <string>entity.name.function.option.cmd-help</string>
+                <string>
+                    entity.name.function.option.cmd-help,
+                    entity.name.function.option.plus.cmd-help
+                </string>
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
@@ -187,12 +190,11 @@
             </dict>
             <dict>
                 <key>name</key>
-                <string>command help: argument</string>
+                <string>command help: argument or variable</string>
                 <key>scope</key>
                 <string>
-                    variable.parameter.option-argument.cmd-help,
-                    variable.parameter.argument.cmd-help,
-                    variable.parameter.other-value.cmd-help
+                    keyword.other.argument.cmd-help,
+                    keyword.other.variable.cmd-help
                 </string>
                 <key>settings</key>
                 <dict>
@@ -202,12 +204,9 @@
             </dict>
             <dict>
                 <key>name</key>
-                <string>command help: option operators</string>
+                <string>command help: end of options</string>
                 <key>scope</key>
-                <string>
-                    keyword.control.end-of-options.cmd-help,
-                    keyword.control.plus-option.cmd-help
-                </string>
+                <string>constant.other.end-of-options.cmd-help</string>
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
@@ -216,9 +215,9 @@
             </dict>
             <dict>
                 <key>name</key>
-                <string>command help: other definition</string>
+                <string>command help: other term</string>
                 <key>scope</key>
-                <string>keyword.other.def.cmd-help</string>
+                <string>constant.other.def.cmd-help</string>
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
@@ -227,9 +226,9 @@
             </dict>
             <dict>
                 <key>name</key>
-                <string>command help: file/path definitions</string>
+                <string>command help: pathname</string>
                 <key>scope</key>
-                <string>constant.file.cmd-help</string>
+                <string>variable.parameter.pathname.cmd-help</string>
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
