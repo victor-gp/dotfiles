@@ -12,7 +12,7 @@
         <key>settings</key>
         <array>
             <!--/// color code key //////////////////////////////////////////////////////////////////////
-                color codes: #0x000000 (where x = color hex char)
+                color codes: #0?000000 (where ? = color hex char)
 
                 0: black (background)
                 1: red

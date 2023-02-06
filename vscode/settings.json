@@ -13,7 +13,7 @@
     "editor.scrollBeyondLastLine": false,
     "editor.padding.bottom": 32,
     "workbench.colorTheme": "Lucario",
-    "editor.formatOnPaste": true,
+    "editor.formatOnPaste": false,
     "explorer.autoReveal": false,
     "telemetry.telemetryLevel": "off",
     "workbench.editor.tabSizing": "shrink",
@@ -80,7 +80,7 @@
     "python.languageServer": "Pylance",
     "python.analysis.completeFunctionParens": true,
     "editor.tabSize": 4,
-    "[markdown][ruby][haskell][scala]": {
+    "[markdown][ruby][haskell][scala][css][scss]": {
         "editor.tabSize": 2,
     },
     "[haskell]": {
@@ -158,9 +158,12 @@
     "terminal.integrated.fontFamily": "'UbuntuMono Nerd Font Mono', monospace",
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.scrollback": 5000,
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false,
     "themeSwitcher.themesList": "Lucario,Dracula,Night Owl (No Italics)",
     "window.titleBarStyle": "custom",
     "workbench.layoutControl.enabled": false,
     "git.enableStatusBarSync": false,
     "window.newWindowDimensions": "maximized",
+    "markdown.validate.enabled": true,
 }
